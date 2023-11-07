@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import "./globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-export default function RootLayout({ children, Component, pageProps }) {
+export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({
       duration: 800,
