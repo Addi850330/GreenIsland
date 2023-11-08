@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import style from "../app/page.module.css";
 const Nav = () => {
-  
   return (
     <nav className={style.nav}>
       <div className={style.icon}>
@@ -19,17 +18,17 @@ const Nav = () => {
       <div className={style.table}>
         <ul className={style.contents}>
           <li className={style.content}>
-            <Link className={style.link} href="/specifycard">
+            <Link className={style.link} href="/specifycard" scroll={false}>
               指定口袋
             </Link>
           </li>
           <li className={style.content}>
-            <Link className={style.link} href="/magiccard">
+            <Link className={style.link} href="/magiccard" scroll={false}>
               咒語卡
             </Link>
           </li>
           <li className={style.content}>
-            <Link className={style.link} href="/managercard">
+            <Link className={style.link} href="/managercard" scroll={false}>
               管理者
             </Link>
           </li>

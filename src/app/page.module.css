@@ -7,7 +7,7 @@
   align-items: center;
   color: rgba(244, 243, 237, 1);
   padding: 20px 0px;
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -207,3 +207,128 @@ nav > .table > .contents > .content > .link {
   height: 100%;
   z-index: 0;
 }
+
+/* loadpage */
+.loadpage {
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(48, 23, 22, 0.5);
+  display: flex;
+  /* justify-content: center; */
+  padding-left: 40%;
+  align-items: center;
+}
+.loadpage > .loadimg {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 60px;
+  height: 83px;
+  /* animation-name: cardrever;
+  animation-duration: 2s; */
+  animation: cardrever 2s infinite cubic-bezier(0, 0, 1, 1);
+  animation-iteration-count: infinite;
+}
+
+.loadpage > .loadimg > .imgfront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(330deg);
+}
+.loadpage > .loadimg > .imgback {
+  transform: rotateZ(330deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.loadpage > .loadtext {
+  margin-left: 40px;
+  font-size: 1.5rem;
+  width: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.loadpage > .loadtext > p {
+  margin-right: 0.5rem;
+  color: rgba(244, 243, 237, 1);
+}
+.loadpage > .loadtext > p:nth-child(1) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  /* animation: textjump 2s infinite cubic-bezier(0, 0, 1, 1); */
+  animation-iteration-count: infinite;
+}
+.loadpage > .loadtext > p:nth-child(2) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+}
+.loadpage > .loadtext > p:nth-child(3) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+}
+.loadpage > .loadtext > p:nth-child(4) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.3s;
+}
+.loadpage > .loadtext > p:nth-child(5) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.4s;
+}
+.loadpage > .loadtext > p:nth-child(6) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+.loadpage > .loadtext > p:nth-child(7) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.6s;
+}
+.loadpage > .loadtext > p:nth-child(8) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.7s;
+}
+.loadpage > .loadtext > p:nth-child(9) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.8s;
+}
+.loadpage > .loadtext > p:nth-child(10) {
+  animation-name: textjump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.9s;
+}
+@keyframes cardrever {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes textjump {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/*  */

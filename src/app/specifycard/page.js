@@ -7,8 +7,10 @@ import { data } from "../data";
 const page = () => {
   const [cards, setCards] = useState(data[0].specifycard);
   const cardInfo = function (e) {
-    console.log(e.target);
+    const cardid = e.target.name;
+    console.log(cards[cardid]);
   };
+
   return (
     <>
       <Sidebar />
@@ -22,14 +24,14 @@ const page = () => {
           >
             <div className={style.cardinfo}>
               <button>
-                <img src={card.img} alt={card.name} />
+                <img name={card.id} src={card.img} alt={card.name} />
               </button>
             </div>
             <p className={style.cardtitle}>
               {card.number} {card.name}
             </p>
             <div className={style.cardbgc}>
-              <img src="./img/cardset.png" alt="" />
+              <img src="./img/cardset.png" alt="bgc" />
             </div>
           </div>
         ))}
