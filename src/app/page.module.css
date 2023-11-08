@@ -141,13 +141,69 @@ nav > .table > .contents > .content > .link {
 
 .card {
   background-color: rgba(244, 243, 237, 1);
-  width: 90%;
-  min-height: 100vh;
+  width: 70%;
+  /* min-height: 100vh; */
   margin: auto;
-  /* padding-left: 100px; */
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 200px;
+  padding-bottom: 200px;
+  overflow: hidden;
 }
-.card > div {
-  margin-left: 250px;
-  margin-right: 50px;
-  color: black;
+.card > .cardset {
+  margin: 45px 45px 20px 45px;
+  position: relative;
+  width: 160px;
+  height: 225px;
+}
+.card > .cardset > .cardinfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.card > .cardset > .cardtitle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  transition: 0.2s;
+}
+.card > .cardset:hover .cardinfo {
+  transition: 0.3s;
+  transform: translate(10%, -5%);
+  box-shadow: rgba(8, 177, 243, 0.4) -5px 5px, rgba(8, 177, 243, 0.3) -10px 10px,
+    rgba(8, 177, 243, 0.2) -15px 15px, rgba(8, 177, 243, 0.1) -20px 20px,
+    rgba(8, 177, 243, 0.05) -25px 25px;
+}
+.card > .cardset:hover .cardtitle {
+  bottom: -60px;
+}
+.card > .cardset > .cardinfo > button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.card > .cardset > .cardinfo > button > img {
+  width: 100%;
+  height: 100%;
+}
+.card > .cardset > .cardbgc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card > .cardset > .cardbgc > img {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
