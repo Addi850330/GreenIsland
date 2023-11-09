@@ -49,6 +49,9 @@ nav > .table > .contents > .content {
 nav > .table > .contents > .content > .link {
   color: rgba(244, 243, 237, 1);
 }
+nav > .table > .contents > .content > .link::after{
+  
+}
 /* sidebar */
 .sidebar {
   color: rgba(244, 243, 237, 1);
@@ -146,6 +149,7 @@ nav > .table > .contents > .content > .link {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 100px;
   padding-left: 200px;
   padding-bottom: 200px;
   overflow: hidden;

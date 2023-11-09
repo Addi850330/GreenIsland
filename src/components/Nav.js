@@ -1,8 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import style from "../app/page.module.css";
 const Nav = () => {
+  const [linkarrow, setLinkarrow] = useState("specifycard");
+
+  const specify = function () {
+    setLinkarrow("specifycard");
+  };
+  const magic = function () {
+    setLinkarrow("magiccard");
+  };
+  const manager = function () {
+    setLinkarrow("managercard");
+  };
+
   return (
     <nav className={style.nav}>
       <div className={style.icon}>
