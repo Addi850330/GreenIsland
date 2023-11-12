@@ -1,9 +1,10 @@
 "use client";
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import Link from "next/link";
-import style from "../page.module.css";
 import { data } from "../data";
+import style from "../page.module.css";
+
 const page = () => {
   const datas = data[0].specifycard;
   const [cards, setCards] = useState(datas);

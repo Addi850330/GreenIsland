@@ -1,19 +1,40 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../../components/Sidebarfreeslot";
+import { data } from "../data";
 import style from "../page.module.css";
 const page = () => {
+  const datas = data[3].freeslot;
+  const [cards, setCards] = useState(datas);
+  const cardInfo = function (e) {
+    const cardid = e.target.name;
+    console.log(cards[cardid]);
+  };
   return (
     <>
       <Sidebar></Sidebar>
 
       <div className={style.card}>
-        <div>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
-          optio cupiditate inventore enim eaque, harum nam laborum fugit
-          provident eum possimus, cumque numquam iusto repellat ea dolorum
-          repellendus quae eligendi.
-        </div>
+        {cards.map((card, index) => (
+          <div
+            onClick={cardInfo}
+            data-aos="fade-up"
+            className={style.cardset}
+            key={index}
+          >
+            <div className={style.cardinfo}>
+              <button>
+                <img name={card.id} src={card.img} alt={card.name} />
+              </button>
+            </div>
+            <p className={style.cardtitle}>
+              {card.number} {card.name}
+            </p>
+            <div className={style.cardbgc}>
+              <img src="./img/cardset.png" alt="bgc" />
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

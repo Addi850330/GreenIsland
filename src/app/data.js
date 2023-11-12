@@ -1412,7 +1412,7 @@ export const data = [
       },
       {
         id: "nan",
-        number: "nan",
+        number: "NaN",
         name: "金粉少女護衛",
         rank: "F",
         img: "./img/managercard/sm/nan.png",
