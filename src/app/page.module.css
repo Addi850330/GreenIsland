@@ -49,8 +49,7 @@ nav > .table > .contents > .content {
 nav > .table > .contents > .content > .link {
   color: rgba(244, 243, 237, 1);
 }
-nav > .table > .contents > .content > .link::after{
-  
+nav > .table > .contents > .content > .link::after {
 }
 /* sidebar */
 .sidebar {
@@ -145,6 +144,7 @@ nav > .table > .contents > .content > .link::after{
 .card {
   background-color: rgba(244, 243, 237, 1);
   width: 70%;
+  min-height: 55vh;
   /* min-height: 100vh; */
   margin: auto;
   display: flex;
@@ -167,6 +167,7 @@ nav > .table > .contents > .content > .link::after{
   top: 0;
   left: 0;
   z-index: 2;
+  border-radius: 10px;
 }
 .card > .cardset > .cardtitle {
   position: absolute;
@@ -180,9 +181,9 @@ nav > .table > .contents > .content > .link::after{
 .card > .cardset:hover .cardinfo {
   transition: 0.3s;
   transform: translate(10%, -5%);
-  box-shadow: rgba(8, 177, 243, 0.4) -5px 5px, rgba(8, 177, 243, 0.3) -10px 10px,
-    rgba(8, 177, 243, 0.2) -15px 15px, rgba(8, 177, 243, 0.1) -20px 20px,
-    rgba(8, 177, 243, 0.05) -25px 25px;
+  box-shadow: rgba(8, 177, 243, 0.4) -3px 2px, rgba(8, 177, 243, 0.3) -6px 4px,
+    rgba(8, 177, 243, 0.2) -9px 6px, rgba(8, 177, 243, 0.1) -12px 8px,
+    rgba(8, 176, 243, 0.05) -15px 10px;
 }
 .card > .cardset:hover .cardtitle {
   bottom: -60px;
@@ -193,6 +194,7 @@ nav > .table > .contents > .content > .link::after{
   border: 0;
   padding: 0;
   cursor: pointer;
+  background-color: rgba(240, 248, 255, 0);
 }
 .card > .cardset > .cardinfo > button > img {
   width: 100%;
