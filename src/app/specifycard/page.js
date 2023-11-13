@@ -18,7 +18,6 @@ const page = () => {
   const rankAll = function () {
     setCards(datas);
     setRank("all");
-    backToTopHandle();
   };
   const rankA = function () {
     const filterA = datas.filter(function (rank) {
@@ -60,6 +59,8 @@ const page = () => {
   };
   // scroll set -----------------------------------
 
+  const [offsetPosition, setOffsetPosition] = useState(0);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -68,27 +69,89 @@ const page = () => {
   }, []);
 
   const toNumber000 = function () {
-    const number000 = document.getElementById("000");
-    const element000 = number000.getBoundingClientRect().top;
-    const navoffset = 30;
+    rankAll();
+    let time = null;
+    function check() {
+      let dom = document.getElementById("000");
+      if (dom) {
+        const number000 = document.getElementById("000");
+        const element000 = number000.getBoundingClientRect().top;
+        console.log(element000);
+        const navoffset = 95;
+        let offsetPosition = element000 - navoffset;
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (!time) {
+          clearTimeout(time);
+        }
+      } else {
+        console.log("loading");
+        time = setTimeout(check, 500);
+      }
+    }
+    check();
+  };
 
-    let offsetPosition = element000 - navoffset;
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+  const toNumber032 = function () {
+    rankAll();
+    let time = null;
+    function check() {
+      let dom = document.getElementById("031");
+      if (dom) {
+        const number032 = document.getElementById("031");
+        const element032 = number032.getBoundingClientRect().top;
+        console.log(element032);
+        const navoffset = 40;
+        let offsetPosition = element032 - navoffset;
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (!time) {
+          clearTimeout(time);
+        }
+      } else {
+        console.log("loading");
+        time = setTimeout(check, 500);
+      }
+    }
+    check();
+  };
 
-    console.log(top);
-    console.log(element000);
-    console.log(offsetPosition);
+  const toNumber064 = function () {
+    rankAll();
+    let time = null;
+    function check() {
+      let dom = document.getElementById("063");
+      if (dom) {
+        const number064 = document.getElementById("063");
+        const element064 = number064.getBoundingClientRect().top;
+        console.log(element064);
+        const navoffset = 40;
+        let offsetPosition = element064 - navoffset;
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (!time) {
+          clearTimeout(time);
+        }
+      } else {
+        console.log("loading");
+        time = setTimeout(check, 500);
+      }
+    }
+    check();
   };
 
   return (
     <>
       <Sidebar
         toNumber000={toNumber000}
-        // toNumber032={toNumber032}
-        // toNumber064={toNumber064}
+        toNumber032={toNumber032}
+        toNumber064={toNumber064}
         rankAll={rankAll}
         rankA={rankA}
         rankB={rankB}
@@ -100,13 +163,12 @@ const page = () => {
       <div className={style.card}>
         {cards.map((card, index) => (
           <div
-            id={card.number}
             onClick={cardInfo}
             data-aos="fade-up"
             className={style.cardset}
             key={index}
           >
-            <div className={style.cardinfo}>
+            <div id={card.number} className={style.cardinfo}>
               <button>
                 <img name={card.id} src={card.img} alt={card.name} />
               </button>
