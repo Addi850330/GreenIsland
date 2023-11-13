@@ -1,34 +1,31 @@
 import React from "react";
 import style from "../app/page.module.css";
 
-const Sidebar = () => {
-  const hello = function () {
-    console.log("123");
-  };
+const Sidebar = (props) => {
   return (
     <div className={style.sidebar}>
       <div className={style.numbermenu}>
         <div>Number :</div>
         <ul className={`${style.cardnumber} ${style.magiccardnumber}`}>
-          <li onClick={hello}>1001~</li>
-          <li>1020~</li>
-          <li>~1040</li>
+          <li>NaN</li>
+          <li>NaN</li>
+          <li>NaN</li>
         </ul>
       </div>
       <div className={style.sidebarimg}>
-        <img src="/icon/iconLight.png" alt="" />
+        <img onClick={props.test} src="/icon/iconLight.png" alt="" />
       </div>
       <div className={style.rankmenu}>
         <ul>
-          <li onClick={hello}>All-Rank</li>
-          <li>A -Rank</li>
-          <li>B -Rank</li>
-          <li>C -Rank</li>
-          <li>D -Rank</li>
-          <li>E -Rank</li>
-          <li>F -Rank</li>
-          <li>G -Rank</li>
-          <li>S -Rank</li>
+          <li onClick={props.rankAll}>All-Rank</li>
+          <li onClick={props.rankB}>B -Rank</li>
+          <li onClick={props.rankC}>C -Rank</li>
+          <li onClick={props.rankD}>D -Rank</li>
+          <li onClick={props.rankE}>E -Rank</li>
+          <li onClick={props.rankF}>F -Rank</li>
+          <li onClick={props.rankG}>G -Rank</li>
+          <li onClick={props.rankH}>H -Rank</li>
+          <li onClick={props.rankSS}>SS -Rank</li>
         </ul>
       </div>
     </div>

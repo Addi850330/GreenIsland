@@ -1,18 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "@/components/Sidebarluler";
 import { data } from "../data";
 import style from "../page.module.css";
 const page = () => {
   const datas = data[2].managercard;
   const [cards, setCards] = useState(datas);
+
   const cardInfo = function (e) {
     const cardid = e.target.name;
     console.log(cards[cardid]);
   };
+
+  const [rank, setRank] = useState("all");
+  const rankAll = function () {
+    setCards(datas);
+    setRank("all");
+  };
+  const ranktest = function () {
+    console.log(rank);
+  };
+
+  // scroll set -----------------------------------
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <>
-      <Sidebar></Sidebar>
+      <Sidebar rankAll={rankAll} test={ranktest}></Sidebar>
       <div className={style.card}>
         {cards.map((card, index) => (
           <div

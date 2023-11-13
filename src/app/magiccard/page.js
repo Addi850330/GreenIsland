@@ -1,18 +1,105 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebarmagic";
 import { data } from "../data";
 import style from "../page.module.css";
 const page = () => {
   const datas = data[1].magiccard;
   const [cards, setCards] = useState(datas);
+
   const cardInfo = function (e) {
     const cardid = e.target.name;
     console.log(cards[cardid]);
   };
+
+  const [rank, setRank] = useState("all");
+  const rankAll = function () {
+    setCards(datas);
+    setRank("all");
+  };
+  const rankA = function () {
+    const filterA = datas.filter(function (rank) {
+      return rank.rank === "A";
+    });
+    setRank("A");
+    setCards(filterA);
+  };
+  const rankB = function () {
+    const filterB = datas.filter(function (rank) {
+      return rank.rank === "B";
+    });
+    setRank("B");
+    setCards(filterB);
+  };
+  const rankC = function () {
+    const filterC = datas.filter(function (rank) {
+      return rank.rank === "C";
+    });
+    setRank("C");
+    setCards(filterC);
+  };
+  const rankD = function () {
+    const filterD = datas.filter(function (rank) {
+      return rank.rank === "D";
+    });
+    setRank("D");
+    setCards(filterD);
+  };
+  const rankE = function () {
+    const filterE = datas.filter(function (rank) {
+      return rank.rank === "E";
+    });
+    setRank("E");
+    setCards(filterE);
+  };
+  const rankF = function () {
+    const filterF = datas.filter(function (rank) {
+      return rank.rank === "F";
+    });
+    setRank("F");
+    setCards(filterF);
+  };
+  const rankG = function () {
+    const filterG = datas.filter(function (rank) {
+      return rank.rank === "G";
+    });
+    setRank("G");
+    setCards(filterG);
+  };
+  const rankS = function () {
+    const filterS = datas.filter(function (rank) {
+      return rank.rank === "S";
+    });
+    setRank("S");
+    setCards(filterS);
+  };
+  const ranktest = function () {
+    console.log(rank);
+  };
+
+  // scroll set -----------------------------------
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <>
-      <Sidebar></Sidebar>
+      <Sidebar
+        rankAll={rankAll}
+        rankA={rankA}
+        rankB={rankB}
+        rankC={rankC}
+        rankD={rankD}
+        rankE={rankE}
+        rankF={rankF}
+        rankG={rankG}
+        rankS={rankS}
+        test={ranktest}
+      ></Sidebar>
 
       <div className={style.card}>
         {cards.map((card, index) => (

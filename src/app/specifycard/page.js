@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
 import Link from "next/link";
 import { data } from "../data";
@@ -8,14 +8,17 @@ import style from "../page.module.css";
 const page = () => {
   const datas = data[0].specifycard;
   const [cards, setCards] = useState(datas);
+
   const cardInfo = function (e) {
     const cardid = e.target.name;
     console.log(cards[cardid]);
   };
-  const [rank, setRank] = useState("");
+
+  const [rank, setRank] = useState("all");
   const rankAll = function () {
     setCards(datas);
     setRank("all");
+    backToTopHandle();
   };
   const rankA = function () {
     const filterA = datas.filter(function (rank) {
@@ -55,9 +58,37 @@ const page = () => {
   const ranktest = function () {
     console.log(rank);
   };
+  // scroll set -----------------------------------
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
+  const toNumber000 = function () {
+    const number000 = document.getElementById("000");
+    const element000 = number000.getBoundingClientRect().top;
+    const navoffset = 30;
+
+    let offsetPosition = element000 - navoffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+
+    console.log(top);
+    console.log(element000);
+    console.log(offsetPosition);
+  };
+
   return (
     <>
       <Sidebar
+        toNumber000={toNumber000}
+        // toNumber032={toNumber032}
+        // toNumber064={toNumber064}
         rankAll={rankAll}
         rankA={rankA}
         rankB={rankB}
@@ -69,6 +100,7 @@ const page = () => {
       <div className={style.card}>
         {cards.map((card, index) => (
           <div
+            id={card.number}
             onClick={cardInfo}
             data-aos="fade-up"
             className={style.cardset}
