@@ -9,7 +9,12 @@ const page = () => {
 
   const cardInfo = function (e) {
     const cardid = e.target.name;
-    console.log(cards[cardid]);
+    console.log(cardid);
+
+    function findcard(id) {
+      return (id.id = cardid);
+    }
+    console.log(datas.find(findcard));
   };
 
   const [rank, setRank] = useState("all");

@@ -11,7 +11,12 @@ const page = () => {
 
   const cardInfo = function (e) {
     const cardid = e.target.name;
-    console.log(cards[cardid]);
+    console.log(cardid);
+
+    function findcard(id) {
+      return (id.id = cardid);
+    }
+    console.log(datas.find(findcard));
   };
 
   const [rank, setRank] = useState("all");
@@ -59,8 +64,6 @@ const page = () => {
   };
   // scroll set -----------------------------------
 
-  const [offsetPosition, setOffsetPosition] = useState(0);
-
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -76,7 +79,7 @@ const page = () => {
       if (dom) {
         const number000 = document.getElementById("000");
         const element000 = number000.getBoundingClientRect().top;
-        console.log(element000);
+        // console.log(element000);
         const navoffset = 95;
         let offsetPosition = element000 - navoffset;
         window.scrollBy({
@@ -87,7 +90,7 @@ const page = () => {
           clearTimeout(time);
         }
       } else {
-        console.log("loading");
+        // console.log("loading");
         time = setTimeout(check, 500);
       }
     }
@@ -102,7 +105,7 @@ const page = () => {
       if (dom) {
         const number032 = document.getElementById("031");
         const element032 = number032.getBoundingClientRect().top;
-        console.log(element032);
+        // console.log(element032);
         const navoffset = 40;
         let offsetPosition = element032 - navoffset;
         window.scrollBy({
@@ -113,7 +116,7 @@ const page = () => {
           clearTimeout(time);
         }
       } else {
-        console.log("loading");
+        // console.log("loading");
         time = setTimeout(check, 500);
       }
     }
@@ -128,7 +131,7 @@ const page = () => {
       if (dom) {
         const number064 = document.getElementById("063");
         const element064 = number064.getBoundingClientRect().top;
-        console.log(element064);
+        // console.log(element064);
         const navoffset = 40;
         let offsetPosition = element064 - navoffset;
         window.scrollBy({
@@ -139,7 +142,7 @@ const page = () => {
           clearTimeout(time);
         }
       } else {
-        console.log("loading");
+        // console.log("loading");
         time = setTimeout(check, 500);
       }
     }

@@ -9,7 +9,12 @@ const page = () => {
 
   const cardInfo = function (e) {
     const cardid = e.target.name;
-    console.log(cards[cardid]);
+    console.log(cardid);
+
+    function findcard(id) {
+      return (id.id = cardid);
+    }
+    console.log(datas.find(findcard));
   };
 
   const [rank, setRank] = useState("all");
@@ -86,9 +91,87 @@ const page = () => {
     });
   }, []);
 
+  const toNumber1001 = function () {
+    rankAll();
+    let time = null;
+    function check() {
+      let dom = document.getElementById("1001");
+      if (dom) {
+        const number1001 = document.getElementById("1001");
+        const element1001 = number1001.getBoundingClientRect().top;
+        // console.log(element1001);
+        const navoffset = 95;
+        let offsetPosition = element1001 - navoffset;
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (!time) {
+          clearTimeout(time);
+        }
+      } else {
+        // console.log("loading");
+        time = setTimeout(check, 500);
+      }
+    }
+    check();
+  };
+  const toNumber1021 = function () {
+    rankAll();
+    let time = null;
+    function check() {
+      let dom = document.getElementById("1021");
+      if (dom) {
+        const number1021 = document.getElementById("1021");
+        const element1021 = number1021.getBoundingClientRect().top;
+        // console.log(element1021);
+        const navoffset = 100;
+        let offsetPosition = element1021 - navoffset;
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (!time) {
+          clearTimeout(time);
+        }
+      } else {
+        // console.log("loading");
+        time = setTimeout(check, 500);
+      }
+    }
+    check();
+  };
+  const toNumber1040 = function () {
+    rankAll();
+    let time = null;
+    function check() {
+      let dom = document.getElementById("1040");
+      if (dom) {
+        const number1040 = document.getElementById("1040");
+        const element1040 = number1040.getBoundingClientRect().top;
+        // console.log(element1040);
+        const navoffset = 40;
+        let offsetPosition = element1040 - navoffset;
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (!time) {
+          clearTimeout(time);
+        }
+      } else {
+        // console.log("loading");
+        time = setTimeout(check, 500);
+      }
+    }
+    check();
+  };
   return (
     <>
       <Sidebar
+        toNumber1001={toNumber1001}
+        toNumber1021={toNumber1021}
+        toNumber1040={toNumber1040}
         rankAll={rankAll}
         rankA={rankA}
         rankB={rankB}
@@ -109,7 +192,7 @@ const page = () => {
             className={style.cardset}
             key={index}
           >
-            <div className={style.cardinfo}>
+            <div id={card.number} className={style.cardinfo}>
               <button>
                 <img name={card.id} src={card.img} alt={card.name} />
               </button>

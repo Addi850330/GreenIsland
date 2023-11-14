@@ -7,9 +7,9 @@ const Sidebar = (props) => {
       <div className={style.numbermenu}>
         <div>Number :</div>
         <ul className={`${style.cardnumber} ${style.magiccardnumber}`}>
-          <li>1001~</li>
-          <li>1020~</li>
-          <li>~1040</li>
+          <li onClick={props.toNumber1001}>1001~</li>
+          <li onClick={props.toNumber1021}>1021~</li>
+          <li onClick={props.toNumber1040}>~1040</li>
         </ul>
       </div>
       <div className={style.sidebarimg}>
