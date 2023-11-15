@@ -9,16 +9,6 @@ const page = () => {
   const datas = data[1].magiccard;
   const [cards, setCards] = useState(datas);
 
-  const cardInfo = function (e) {
-    const cardid = e.target.name;
-    console.log(cardid);
-
-    function findcard(id) {
-      return (id.id = cardid);
-    }
-    console.log(datas.find(findcard));
-  };
-
   const [rank, setRank] = useState("all");
   const rankAll = function () {
     setCards(datas);
@@ -168,6 +158,39 @@ const page = () => {
     }
     check();
   };
+
+  // pop-up window-------------------------------------
+
+  const [cardname, setCardname] = useState("");
+  const [cardrank, setCardrank] = useState("");
+  const [cardnumber, setCardnumber] = useState("");
+  const [carddescription, setCarddescription] = useState("");
+  const [cardimg, setCardimg] = useState("");
+  const [cardimgorigin, setCardimgorigin] = useState("");
+
+  const [windowSwitch, setWindowSwitch] = useState("close");
+
+  const cardInfo = function (e) {
+    const cardid = e.target.name;
+    // console.log(cardid);
+    datas.forEach((obj) => {
+      if (obj.id == cardid) {
+        setCardname(obj.name);
+        setCardrank(obj.rank);
+        setCardnumber(obj.number);
+        setCarddescription(obj.description);
+        setCardimg(obj.img);
+        setCardimgorigin(obj.imgorigin);
+        // console.log(obj);
+      }
+    });
+    setWindowSwitch("open");
+  };
+
+  const close = function () {
+    setWindowSwitch("close");
+  };
+
   return (
     <>
       <Sidebar
@@ -184,8 +207,18 @@ const page = () => {
         rankG={rankG}
         rankS={rankS}
         test={ranktest}
+        rank={rank}
       ></Sidebar>
-      <CardInfo />
+      <CardInfo
+        close={close}
+        windowSwitch={windowSwitch}
+        name={cardname}
+        rank={cardrank}
+        number={cardnumber}
+        description={carddescription}
+        img={cardimg}
+        imgorigin={cardimgorigin}
+      />
       <div className={style.card}>
         {cards.map((card, index) => (
           <div

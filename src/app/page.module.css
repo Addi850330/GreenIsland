@@ -124,6 +124,19 @@ nav > .table > .contents > .content > .link {
 .sidebar > .rankmenu > ul > .lulerrankmenu {
   width: 100px;
 }
+/* sidebar > rankmenu */
+.rank::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: rgb(8, 176, 243);
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: -5px;
+  z-index: 7;
+  transform: scale(0.7, 0.7);
+}
 
 /* footer */
 .footer {
@@ -348,6 +361,10 @@ nav > .table > .contents > .content > .link {
   background-color: rgba(53, 70, 53, 0.95);
   z-index: 5;
   color: rgba(244, 243, 237, 1);
+  transition: 0.5s;
+}
+.close {
+  left: 150%;
 }
 .cardboard > .close {
   width: 100%;

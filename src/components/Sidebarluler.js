@@ -17,7 +17,12 @@ const Sidebar = (props) => {
       </div>
       <div className={style.rankmenu}>
         <ul>
-          <li onClick={props.rankAll} className={style.lulerrankmenu}>
+          <li
+            className={
+              props.rank === "all" ? `${style.rank} ${style.lulerrankmenu}` : ``
+            }
+            onClick={props.rankAll}
+          >
             All-Rank
           </li>
         </ul>

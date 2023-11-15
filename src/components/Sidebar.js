@@ -17,12 +17,42 @@ const Sidebar = (props) => {
       </div>
       <div className={style.rankmenu}>
         <ul>
-          <li onClick={props.rankAll}>All-Rank</li>
-          <li onClick={props.rankA}>A -Rank</li>
-          <li onClick={props.rankB}>B -Rank</li>
-          <li onClick={props.rankD}>D -Rank</li>
-          <li onClick={props.rankS}>S -Rank</li>
-          <li onClick={props.rankSS}>SS -Rank</li>
+          <li
+            className={props.rank === "all" ? `${style.rank} ` : ``}
+            onClick={props.rankAll}
+          >
+            All-Rank
+          </li>
+          <li
+            className={props.rank === "A" ? `${style.rank} ` : ``}
+            onClick={props.rankA}
+          >
+            A -Rank
+          </li>
+          <li
+            className={props.rank === "B" ? `${style.rank} ` : ``}
+            onClick={props.rankB}
+          >
+            B -Rank
+          </li>
+          <li
+            className={props.rank === "D" ? `${style.rank} ` : ``}
+            onClick={props.rankD}
+          >
+            D -Rank
+          </li>
+          <li
+            className={props.rank === "S" ? `${style.rank} ` : ``}
+            onClick={props.rankS}
+          >
+            S -Rank
+          </li>
+          <li
+            className={props.rank === "SS" ? `${style.rank} ` : ``}
+            onClick={props.rankSS}
+          >
+            SS -Rank
+          </li>
         </ul>
       </div>
     </div>

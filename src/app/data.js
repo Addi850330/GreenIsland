@@ -795,7 +795,7 @@ export const data = [
       {
         id: 80,
         number: "080",
-        name: "浮游石",
+        name: "浮遊石",
         rank: "S",
         img: "./img/specifycard/sm/80.png",
         imgorigin: "./img/specifycard/origin/80.jpg",
@@ -1002,7 +1002,7 @@ export const data = [
         img: "./img/magiccard/sm/1.png",
         imgorigin: "./img/magiccard/origin/1.png",
         description:
-          "查看一位目标玩家的所有自由卡槽。（仅限于在游戏中遇到过的玩家）",
+          "查看一位目標玩家的所有自由卡槽。（僅限於在遊戲中遇到過的玩家）",
       },
       {
         id: 1002,
@@ -1012,7 +1012,7 @@ export const data = [
         img: "./img/magiccard/sm/2.png",
         imgorigin: "./img/magiccard/origin/2.png",
         description:
-          "查看一位目标玩家的所有指定卡槽。（仅限于在游戏中遇到过的玩家）",
+          "查看一位目標玩家的所有指定卡槽。（僅限於在遊戲中遇到過的玩家）",
       },
       {
         id: 1003,
@@ -1021,7 +1021,7 @@ export const data = [
         rank: "G",
         img: "./img/magiccard/sm/3.png",
         imgorigin: "./img/magiccard/origin/3.png",
-        description: "防止一次来自其他玩家的咒语攻击。",
+        description: "防止一次来自其他玩家的咒語攻擊。",
       },
       {
         id: 1004,
@@ -1030,7 +1030,7 @@ export const data = [
         rank: "E",
         img: "./img/magiccard/sm/4.png",
         imgorigin: "./img/magiccard/origin/4.png",
-        description: "击退其他玩家的攻击咒语，并将效果返回给对方。",
+        description: "擊退其他玩家的攻擊咒語，並將效果返回给對方。",
       },
       {
         id: 1005,
@@ -1040,7 +1040,7 @@ export const data = [
         img: "./img/magiccard/sm/5.png",
         imgorigin: "./img/magiccard/origin/5.png",
         description:
-          "飛到其他指定玩家（仅限于在遊戲中遇到过的玩家）所在的地点。",
+          "飛到其他指定玩家（僅限於在遊戲中遇到過的玩家）所在的地点。",
       },
       {
         id: 1006,
@@ -1049,7 +1049,7 @@ export const data = [
         rank: "F",
         img: "./img/magiccard/sm/6.png",
         imgorigin: "./img/magiccard/origin/6.png",
-        description: "随機從另一位玩家的自由卡槽那里竊取一张卡。",
+        description: "随機從另一位玩家的自由卡槽那裡竊取一張卡。",
       },
       {
         id: 1007,
@@ -1058,16 +1058,16 @@ export const data = [
         rank: "C",
         img: "./img/magiccard/sm/7.png",
         imgorigin: "./img/magiccard/origin/7.png",
-        description: "從另一位玩家的指定卡槽中随机竊取一张卡。",
+        description: "從另一位玩家的指定卡槽中随機竊取一張卡。",
       },
       {
         id: 1008,
         number: "1008",
-        name: "交换",
+        name: "交換",
         rank: "E",
         img: "./img/magiccard/sm/8.png",
         imgorigin: "./img/magiccard/origin/8.png",
-        description: "随机用自己的一张卡替换另一张玩家的一张卡。",
+        description: "随機用自己的一張卡替換另一張玩家的一張卡。",
       },
       {
         id: 1009,
@@ -1076,7 +1076,7 @@ export const data = [
         rank: "G",
         img: "./img/magiccard/sm/9.png",
         imgorigin: "./img/magiccard/origin/9.png",
-        description: "飞往指定的城市（仅限于去过的城市）。",
+        description: "飛往指定的城市（僅限於去過的城市）。",
       },
       {
         id: 1010,
@@ -1086,7 +1086,7 @@ export const data = [
         img: "./img/magiccard/sm/10.png",
         imgorigin: "./img/magiccard/origin/10.png",
         description:
-          "将您拥有的一张卡转换为拥有的另一张卡。（变化后的卡片计入这种卡片的卡片化限度枚数。如果卡片化限度枚数为MAX，则变化失败，并且“拟态”将被销毁。）",
+          "將您擁有的一張卡轉換為擁有的另一張卡。（變化後的卡片計入這種卡片的卡片化限度枚數。如果卡片化限度枚數為MAX，則變化失敗，並且「擬態」將被銷毁。）",
       },
       {
         id: 1011,
@@ -1096,7 +1096,7 @@ export const data = [
         img: "./img/magiccard/sm/11.png",
         imgorigin: "./img/magiccard/origin/11.png",
         description:
-          "从一个目标玩家的指定卡槽卡中随机选择一张，并将其转换为该卡。（如果目标玩家指定卡槽中没有卡，或者变化后的卡的卡片化限度枚数为MAX，则变化失败，并且“复制”将被销毁。）",
+          "從一个目標玩家的指定卡槽卡中随機選擇一張，並將其轉換為該卡。（如果目標玩家指定卡槽中没有卡，或者變化後的卡的卡片化限度枚數為MAX，則變化失敗，並且「復制」將被銷毁。）",
       },
       {
         id: 1012,
@@ -1105,7 +1105,7 @@ export const data = [
         rank: "F",
         img: "./img/magiccard/sm/12.png",
         imgorigin: "./img/magiccard/origin/12.png",
-        description: "令目标玩家飞向岛上某处。",
+        description: "令目標玩家飛向島上某处。",
       },
       {
         id: 1013,
@@ -1114,7 +1114,7 @@ export const data = [
         rank: "D",
         img: "./img/magiccard/sm/13.png",
         imgorigin: "./img/magiccard/origin/13.png",
-        description: "令一名目标玩家飞到起点。",
+        description: "令一名目標玩家飛到起点。",
       },
       {
         id: 1014,
@@ -1123,7 +1123,7 @@ export const data = [
         rank: "B",
         img: "./img/magiccard/sm/14.png",
         imgorigin: "./img/magiccard/origin/14.png",
-        description: "令一名目标玩家飞到岛外。",
+        description: "令一名目標玩家飛到島外。",
       },
       {
         id: 1015,
@@ -1132,7 +1132,7 @@ export const data = [
         rank: "D",
         img: "./img/magiccard/sm/15.png",
         imgorigin: "./img/magiccard/origin/15.png",
-        description: "查看一位目标玩家的所有卡牌数据。",
+        description: "查看一位目標玩家的所有卡牌數據。",
       },
       {
         id: 1016,
@@ -1142,7 +1142,7 @@ export const data = [
         img: "./img/magiccard/sm/16.png",
         imgorigin: "./img/magiccard/origin/16.png",
         description:
-          "飞往从未去过的城市。（如果已去过所有城市，您将不会移动并且卡片会被毁。）",
+          "飛往從未去過的城市。（如果已去過所有城市，您將不會移動並且卡片會被毁。）",
       },
       {
         id: 1017,
@@ -1152,7 +1152,7 @@ export const data = [
         img: "./img/magiccard/sm/17.png",
         imgorigin: "./img/magiccard/origin/17.png",
         description:
-          "飞到一个您从未遇到过的玩家所在的地方。（如果游戏中没有您从未遇到过的玩家，您将不会移动并且卡片会被毁。）",
+          "飛到一个您從未遇到過的玩家所在的地方。（如果遊戲中没有您從未遇到過的玩家，您將不會移動並且卡片會被毁。）",
       },
       {
         id: 1018,
@@ -1162,26 +1162,26 @@ export const data = [
         img: "./img/magiccard/sm/18.png",
         imgorigin: "./img/magiccard/origin/18.png",
         description:
-          "从使用该咒语的玩家周围20m半径内的所有玩家中随机窃取一张牌。",
+          "從使用該咒語的玩家周围20m半徑内的所有玩家中随機竊取一張牌。",
       },
       {
         id: 1019,
         number: "1019",
-        name: "城门",
+        name: "城門",
         rank: "F",
         img: "./img/magiccard/sm/19.png",
         imgorigin: "./img/magiccard/origin/19.png",
-        description: "防止一次其他玩家的近距离攻击咒语。",
+        description: "防止一次其他玩家的近距離攻擊咒語。",
       },
       {
         id: 1020,
         number: "1020",
-        name: "赝品",
+        name: "贗品",
         rank: "C",
         img: "./img/magiccard/sm/20.png",
         imgorigin: "./img/magiccard/origin/20.png",
         description:
-          "将“赝品”更改No.001到099的任何一张卡。可以将转换后的卡放置在指定卡槽中，但它不满足集齐卡片的条件，也无法被实体化。不计入卡片化限度枚数。",
+          "將「贗品」更改No.001到099的任何一張卡。可以將轉換後的卡放置在指定卡槽中，但它不滿足集齐卡片的條件，也無法被實體化。不計入卡片化限度枚數。",
       },
       {
         id: 1021,
@@ -1190,7 +1190,7 @@ export const data = [
         rank: "B",
         img: "./img/magiccard/sm/21.png",
         imgorigin: "./img/magiccard/origin/21.png",
-        description: "拿走另一位玩家拥有的任何一张卡。",
+        description: "拿走另一位玩家擁有的任何一張卡。",
       },
       {
         id: 1022,
@@ -1200,17 +1200,17 @@ export const data = [
         img: "./img/magiccard/sm/22.png",
         imgorigin: "./img/magiccard/origin/22.png",
         description:
-          "选择目标玩家的一张B级或更高等级的卡，并将其​​转换为等级D或更低等级的任意编号的卡。（如果卡片化限度枚数为MAX，或目标玩家没有B级或更高的纸牌，则“堕落”将被销毁。）变化后，指定卡槽中所有具有不同编号的卡都将被销毁。",
+          "選擇目標玩家的一張B级或更高等级的卡，並將其​​轉換為等级D或更低等级的任意编號的卡。（如果卡片化限度枚數為MAX，或目標玩家没有B级或更高的纸牌，則「堕落」將被銷毁。）變化後，指定卡槽中所有具有不同编號的卡都將被銷毁。",
       },
       {
         id: 1023,
         number: "1023",
-        name: "妥协",
+        name: "妥協",
         rank: "B",
         img: "./img/magiccard/sm/23.png",
         imgorigin: "./img/magiccard/origin/23.png",
         description:
-          "选择目标玩家的一张A级或更高等级的卡并销毁它。相反，被销毁卡的玩家可以指定并得到一张比被销毁的卡低三级的卡。如果目标玩家没有A级或更高等级的卡，则“妥协”会重新卡片化并退还给玩家。（如果指定的低3级的卡的卡片化限度枚数为MAX，您将不会收到任何卡。）",
+          "選擇目標玩家的一張A级或更高等级的卡並銷毁它。相反，被銷毁卡的玩家可以指定並得到一張比被銷毁的卡低三级的卡。如果目標玩家没有A级或更高等级的卡，則「妥協」會重新卡片化並退還给玩家。（如果指定的低3级的卡的卡片化限度枚數為MAX，您將不會收到任何卡。）",
       },
       {
         id: 1024,
@@ -1220,27 +1220,27 @@ export const data = [
         img: "./img/magiccard/sm/24.png",
         imgorigin: "./img/magiccard/origin/24.png",
         description:
-          "恢复一个目标玩家的卡牌中由“赝品，“复制”和“拟态”变换得的所有卡。由此，指定卡槽中所有具有不同编号的卡都将被销毁。 “看破”不能成为“赝品”，“复制”或“拟态”的目标。",
+          "恢復一个目標玩家的卡牌中由「贗品，「復制」和「擬態」變換得的所有卡。由此，指定卡槽中所有具有不同编號的卡都將被銷毁。 「看破」不能成為「贗品」，「復制」或「擬態」的目標。",
       },
       {
         id: 1025,
         number: "1025",
-        name: "暗幂",
+        name: "暗幕",
         rank: "F",
         img: "./img/magiccard/sm/25.png",
         imgorigin: "./img/magiccard/origin/25.png",
         description:
-          "使用此卡防止一次其他玩家的“盗窃”和“透视”。（“暗幂”的效果正在持续时，使用另一张“暗幂”并不能使效果生效两次。）",
+          "使用此卡防止一次其他玩家的「盗竊」和「透视」。（「暗幕」的效果正在持續时，使用另一張「暗幕」並不能使效果生效两次。）",
       },
       {
         id: 1026,
         number: "1026",
-        name: "圣水",
+        name: "聖水",
         rank: "A",
         img: "./img/magiccard/sm/26.png",
         imgorigin: "./img/magiccard/origin/26.png",
         description:
-          "使用此卡的玩家可以防御其他玩家的攻击咒语10次。（“圣水”的效果正在持续时，使用另一张“圣水”并不会增加防御的次数。）此卡不能被咒语夺取或销毁。",
+          "使用此卡的玩家可以防御其他玩家的攻擊咒語10次。（「聖水」的效果正在持續时，使用另一張「聖水」並不會增加防御的次數。）此卡不能被咒語夺取或銷毁。",
       },
       {
         id: 1027,
@@ -1250,7 +1250,7 @@ export const data = [
         img: "./img/magiccard/sm/27.png",
         imgorigin: "./img/magiccard/origin/27.png",
         description:
-          "您总是可以知道一个目标玩家的当前位置。（效果将一直持续到目标玩家退出游戏为止。）",
+          "您總是可以知道一个目標玩家的當前位置。（效果將一直持續到目標玩家退出遊戲為止。）",
       },
       {
         id: 1028,
@@ -1260,7 +1260,7 @@ export const data = [
         img: "./img/magiccard/sm/28.png",
         imgorigin: "./img/magiccard/origin/28.png",
         description:
-          "随机选择并销毁另一位玩家的一张自由卡槽的卡。（如果目标玩家的自由卡槽中没有卡，则“投石”将被销毁。）",
+          "随機選擇並銷毁另一位玩家的一張自由卡槽的卡。（如果目標玩家的自由卡槽中没有卡，則「投石」將被銷毁。）",
       },
       {
         id: 1029,
@@ -1270,16 +1270,16 @@ export const data = [
         img: "./img/magiccard/sm/29.png",
         imgorigin: "./img/magiccard/origin/29.png",
         description:
-          "从另一位玩家的指定卡槽中随机选择一张牌并将其销毁。（如果目标玩家指定卡槽中没有卡，则“凶弹”将被销毁。）",
+          "從另一位玩家的指定卡槽中随機選擇一張牌並將其銷毁。（如果目標玩家指定卡槽中没有卡，則「凶彈」將被銷毁。）",
       },
       {
         id: 1030,
         number: "1030",
-        name: "道标",
+        name: "道標",
         rank: "E",
         img: "./img/magiccard/sm/30.png",
         imgorigin: "./img/magiccard/origin/30.png",
-        description: "您可以知道具有指定编号物品的位置。（NO.000除外）",
+        description: "您可以知道具有指定编號物品的位置。（NO.000除外）",
       },
       {
         id: 1031,
@@ -1288,7 +1288,7 @@ export const data = [
         rank: "G",
         img: "./img/magiccard/sm/31.png",
         imgorigin: "./img/magiccard/origin/31.png",
-        description: "您可以看到指定编号物品卡的描述。（NO.000除外）",
+        description: "您可以看到指定编號物品卡的描述。（NO.000除外）",
       },
       {
         id: 1032,
@@ -1297,7 +1297,7 @@ export const data = [
         rank: "G",
         img: "./img/magiccard/sm/32.png",
         imgorigin: "./img/magiccard/origin/32.png",
-        description: "转换为一张随机物品卡。",
+        description: "轉換為一張随機物品卡。",
       },
       {
         id: 1033,
@@ -1307,7 +1307,7 @@ export const data = [
         img: "./img/magiccard/sm/33.png",
         imgorigin: "./img/magiccard/origin/33.png",
         description:
-          "您始终可以知道一个目标玩家指定卡槽的所有数据。（效果将一直持续到目标玩家退出游戏为止。）",
+          "您始终可以知道一个目標玩家指定卡槽的所有數據。（效果將一直持續到目標玩家退出遊戲為止。）",
       },
       {
         id: 1034,
@@ -1317,17 +1317,17 @@ export const data = [
         img: "./img/magiccard/sm/34.png",
         imgorigin: "./img/magiccard/origin/34.png",
         description:
-          "取消攻击咒语的转化并恢复原状。（如果恢复的卡数量为卡片化限度枚数MAX，则将其恢复为物品，此后将无法转换为卡牌。如果达到卡片化限度枚数MAX的是咒语卡还，则销毁该卡，除非可以立刻使用该咒语。）",
+          "取消攻擊咒語的轉化並恢復原狀。（如果恢復的卡數量為卡片化限度枚數MAX，則將其恢復為物品，此後將無法轉換為卡牌。如果達到卡片化限度枚數MAX的是咒語卡還，則銷毁該卡，除非可以立刻使用該咒語。）",
       },
       {
         id: 1035,
         number: "1035",
-        name: "坚牢",
+        name: "堅牢",
         rank: "S",
         img: "./img/magiccard/sm/35.png",
         imgorigin: "./img/magiccard/origin/35.png",
         description:
-          "指定页面卡槽中的卡片，只要还位于卡槽中，就永远不会被咒语夺取或破坏。（可以指定的页面限于1到11中的任何一页，不能选择自由卡槽页面。）",
+          "指定頁面卡槽中的卡片，只要還位於卡槽中，就永远不會被咒語夺取或破坏。（可以指定的頁面限於1到11中的任何一頁，不能選擇自由卡槽頁面。）",
       },
       {
         id: 1036,
@@ -1337,7 +1337,7 @@ export const data = [
         img: "./img/magiccard/sm/36.png",
         imgorigin: "./img/magiccard/origin/36.png",
         description:
-          "使用此卡的玩家可以对于NO.001到099的所有卡获取“解析”和“名簿”效果。（效果将一直持续到使用它的玩家退出游戏为止。）",
+          "使用此卡的玩家可以對於NO.001到099的所有卡獲取「解析」和「名簿」效果。（效果將一直持續到使用它的玩家退出遊戲為止。）",
       },
       {
         id: 1037,
@@ -1347,7 +1347,7 @@ export const data = [
         img: "./img/magiccard/sm/37.png",
         imgorigin: "./img/magiccard/origin/37.png",
         description:
-          "解除卡片化得到的物品可以再次转换为卡牌。（仅限于C级或更低等级的物品。如果目标物品的卡片化限度枚数为MAX，则无法将其重新卡片化，并且“再生”将被破坏。）",
+          "解除卡片化得到的物品可以再次轉換為卡牌。（僅限於C级或更低等级的物品。如果目標物品的卡片化限度枚數為MAX，則無法將其重新卡片化，並且「再生」將被破坏。）",
       },
       {
         id: 1038,
@@ -1357,7 +1357,7 @@ export const data = [
         img: "./img/magiccard/sm/38.png",
         imgorigin: "./img/magiccard/origin/38.png",
         description:
-          "您可以指定一种目标物品，并知道当前拥有该物品卡的人数和卡的总数。",
+          "您可以指定一種目標物品，並知道當前擁有該物品卡的人數和卡的總數。",
       },
       {
         id: 1039,
@@ -1367,7 +1367,7 @@ export const data = [
         img: "./img/magiccard/sm/39.png",
         imgorigin: "./img/magiccard/origin/39.png",
         description:
-          "半径20m以内的所有玩家（包括使用该咒语的玩家）都飞往指定的城市（仅限于去过的城市）或指定的玩家（仅限于在游戏中遇到过的玩家）。",
+          "半徑20m以内的所有玩家（包括使用該咒語的玩家）都飛往指定的城市（僅限於去過的城市）或指定的玩家（僅限於在遊戲中遇到過的玩家）。",
       },
       {
         id: 1040,
@@ -1377,7 +1377,7 @@ export const data = [
         img: "./img/magiccard/sm/40.png",
         imgorigin: "./img/magiccard/origin/40.png",
         description:
-          "您可以通过卡片书与其他玩家（仅限于在游戏中遇到过的玩家）交谈。（最长三分钟，只有使用“通信”的玩家才能在中途断开通信。）",
+          "您可以通過卡片書與其他玩家（僅限於在遊戲中遇到過的玩家）交談。（最長三分鐘，只有使用「通信」的玩家才能在中途斷開通信。）",
       },
     ],
   },
@@ -1416,7 +1416,7 @@ export const data = [
         name: "金粉少女護衛",
         rank: "F",
         img: "./img/managercard/sm/nan.png",
-        imgorigin: "./img/managercard/origin/nan.jpg",
+        imgorigin: "./img/managercard/origin/nan.png",
         description:
           "金塵少女衛隊穿著西裝，打著領帶。他的頭髮梳理得很整齊，眉毛模糊，下巴裂開。最初，他表現得冷靜而專業，然而，當有人從豪宅中救出金粉女孩時，他變得好戰。",
       },
@@ -1430,7 +1430,7 @@ export const data = [
         name: "島的地圖",
         rank: "G",
         img: "./img/freeslot/sm/100.png",
-        imgorigin: "./img/freeslot/origin/100.jpg",
+        imgorigin: "./img/freeslot/origin/100.png",
         description:
           "只顯示島的形狀的地圖。內容會籍由實際去過當地，並得到情報後，自動填入的魔法地圖。",
       },
@@ -1440,7 +1440,7 @@ export const data = [
         name: "島的地圖",
         rank: "D",
         img: "./img/freeslot/sm/101.png",
-        imgorigin: "./img/freeslot/origin/101.jpg",
+        imgorigin: "./img/freeslot/origin/101.png",
         description:
           "詳細記載城市及地名等資料的地圖。有許多特產情報、推薦景點、抄近路地圖等超值情報!",
       },
@@ -1450,7 +1450,7 @@ export const data = [
         name: "交換券",
         rank: "SS",
         img: "./img/freeslot/sm/102.png",
-        imgorigin: "./img/freeslot/origin/102.jpg",
+        imgorigin: "./img/freeslot/origin/102.png",
         description:
           "可用以交換「大天使的氣息」的券。/「大天使的氣息」的卡片化限度數目為max時才能取得。",
       },
@@ -1460,7 +1460,7 @@ export const data = [
         name: "支配者的招待",
         rank: "SS",
         img: "./img/freeslot/sm/110.png",
-        imgorigin: "./img/freeslot/origin/110.jpg",
+        imgorigin: "./img/freeslot/origin/110.png",
         description:
           "來自島嶼統治者的邀請。隨附顯示城堡位置的徽章和地圖。只有持有此徽章的人才能進入。",
       },
@@ -1470,7 +1470,7 @@ export const data = [
         name: "生病的村民",
         rank: "F",
         img: "./img/freeslot/sm/163.png",
-        imgorigin: "./img/freeslot/origin/163.jpg",
+        imgorigin: "./img/freeslot/origin/163.png",
         description: "村民感染島上的流行病",
       },
       {
@@ -1479,7 +1479,7 @@ export const data = [
         name: "健康的村民",
         rank: "C",
         img: "./img/freeslot/sm/263.png",
-        imgorigin: "./img/freeslot/origin/263.jpg",
+        imgorigin: "./img/freeslot/origin/263.png",
         description: "村民從島上流行病中康復並恢復健康",
       },
       {
@@ -1488,7 +1488,7 @@ export const data = [
         name: "通行票",
         rank: "B",
         img: "./img/freeslot/sm/266.png",
-        imgorigin: "./img/freeslot/origin/266.jpg",
+        imgorigin: "./img/freeslot/origin/266.png",
         description:
           "離開GI的時候所必要的票卷。用錢向所長買，或是打倒所長即可入手。另外，不管完成多少難題，所長都不會給的。",
       },
@@ -1498,7 +1498,7 @@ export const data = [
         name: "獨眼巨人",
         rank: "G",
         img: "./img/freeslot/sm/572.png",
-        imgorigin: "./img/freeslot/origin/572.jpg",
+        imgorigin: "./img/freeslot/origin/572.png",
         description:
           "巨人族中身材最巨大的種族。喜歡集體行動，會攻擊侵入地盤的生物。智能低，弱點為眼睛，一旦被打到，就變得出乎意料的脆弱。",
       },
@@ -1508,7 +1508,7 @@ export const data = [
         name: "泡泡馬",
         rank: "C",
         img: "./img/freeslot/sm/585.png",
-        imgorigin: "./img/freeslot/origin/585.jpg",
+        imgorigin: "./img/freeslot/origin/585.png",
         description:
           "以紅白兩色泡泡迷惑敵人，保護自己。幾乎沒有什麼攻擊力，只是對手會被泡泡的破裂聲嚇到。",
       },
@@ -1518,7 +1518,7 @@ export const data = [
         name: "群狼之首",
         rank: "C",
         img: "./img/freeslot/sm/598.png",
-        imgorigin: "./img/freeslot/origin/598.jpg",
+        imgorigin: "./img/freeslot/origin/598.png",
         description:
           "成群結隊襲擊旅人的狼的首領。在c等級裏面有著最強的體力以及攻擊力。不打倒首領的話，部下的狼群會無限的出現。",
       },
@@ -1528,7 +1528,7 @@ export const data = [
         name: "10000j",
         rank: "H",
         img: "./img/freeslot/sm/607.png",
-        imgorigin: "./img/freeslot/origin/607.jpg",
+        imgorigin: "./img/freeslot/origin/607.png",
         description:
           "貪婪之島的最高面額的紙幣。解除卡片化後的形狀和國際通貨紙幣完全一樣。（在貪婪之島中，不是卡片狀態就毫無價值）",
       },
@@ -1538,7 +1538,7 @@ export const data = [
         name: "綠球藻",
         rank: "D",
         img: "./img/freeslot/sm/673.png",
-        imgorigin: "./img/freeslot/origin/673.jpg",
+        imgorigin: "./img/freeslot/origin/673.png",
         description:
           "以超高速移動的球狀生物。硬度約如橡皮球，被攻擊也不會受傷，只是打到臉上很令人生氣。",
       },
@@ -1548,7 +1548,7 @@ export const data = [
         name: "黑色素蜥蜴",
         rank: "E",
         img: "./img/freeslot/sm/697.png",
-        imgorigin: "./img/freeslot/origin/697.jpg",
+        imgorigin: "./img/freeslot/origin/697.png",
         description:
           "可吞下整只牛的巨大蜥蜴。背上某處有一敏感的痣，被按一下就會死。為了隱藏弱點，以大小不一的斑點掩飾。",
       },
@@ -1558,7 +1558,7 @@ export const data = [
         name: "遙控器老鼠 ",
         rank: "H",
         img: "./img/freeslot/sm/711.png",
-        imgorigin: "./img/freeslot/origin/711.jpg",
+        imgorigin: "./img/freeslot/origin/711.png",
         description:
           "用念能力操縱物體自衛的操作系老鼠。非常膽小，只要突然遭到其他生物就會嚇死。繁殖力旺盛，島上隨處可見。",
       },
@@ -1568,7 +1568,7 @@ export const data = [
         name: "加魯加打",
         rank: "F",
         img: "./img/freeslot/sm/1217.png",
-        imgorigin: "./img/freeslot/origin/1217.jpg",
+        imgorigin: "./img/freeslot/origin/1217.png",
         description:
           "本島三大珍味之一。味道細緻無法憑外表想像。人們相信雌魚的卵具有長壽效果。用煮的或烤的都非常好吃。",
       },
@@ -1578,7 +1578,7 @@ export const data = [
         name: "汽油",
         rank: "H",
         img: "./img/freeslot/sm/14170.png",
-        imgorigin: "./img/freeslot/origin/14170.jpg",
+        imgorigin: "./img/freeslot/origin/14170.png",
         description: "玻璃容器中的燃料具有揮發性和易燃性。",
       },
       {
@@ -1587,7 +1587,7 @@ export const data = [
         name: "石頭",
         rank: "H",
         img: "./img/freeslot/sm/21449.png",
-        imgorigin: "./img/freeslot/origin/21449.jpg",
+        imgorigin: "./img/freeslot/origin/21449.png",
         description: "路邊平凡無奇的石頭。丟向人可以帶給對方一些傷害。",
       },
       {
@@ -1596,7 +1596,7 @@ export const data = [
         name: "大石頭",
         rank: "H",
         img: "./img/freeslot/sm/25008.png",
-        imgorigin: "./img/freeslot/origin/25008.jpg",
+        imgorigin: "./img/freeslot/origin/25008.png",
         description: "一塊大岩石。如果有人被壓在下面，他們將無法毫髮無傷。",
       },
     ],
