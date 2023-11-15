@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebarmagic";
+import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
 import style from "../page.module.css";
+
 const page = () => {
   const datas = data[1].magiccard;
   const [cards, setCards] = useState(datas);
@@ -183,7 +185,7 @@ const page = () => {
         rankS={rankS}
         test={ranktest}
       ></Sidebar>
-
+      <CardInfo />
       <div className={style.card}>
         {cards.map((card, index) => (
           <div

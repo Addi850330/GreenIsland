@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
+import CardInfo from "../../components/CardInfo";
 import Link from "next/link";
 import { data } from "../data";
 import style from "../page.module.css";
@@ -80,7 +81,7 @@ const page = () => {
         const number000 = document.getElementById("000");
         const element000 = number000.getBoundingClientRect().top;
         // console.log(element000);
-        const navoffset = 95;
+        const navoffset = 45;
         let offsetPosition = element000 - navoffset;
         window.scrollBy({
           top: offsetPosition,
@@ -163,6 +164,7 @@ const page = () => {
         rankSS={rankSS}
         test={ranktest}
       />
+      <CardInfo />
       <div className={style.card}>
         {cards.map((card, index) => (
           <div

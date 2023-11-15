@@ -34,13 +34,14 @@
 .nav > .title {
   font-family: "Joti One", serif;
   font-size: 2.5rem;
-  margin-left: 7.5rem;
+  transform: translateX(50%);
 }
 .nav > .table {
-  margin-right: 60px;
+  margin-right: 50px;
 }
 .nav > .table > .contents {
   display: flex;
+  justify-content: flex-start;
 }
 nav > .table > .contents > .content {
   padding: 0 30px;
@@ -49,8 +50,7 @@ nav > .table > .contents > .content {
 nav > .table > .contents > .content > .link {
   color: rgba(244, 243, 237, 1);
 }
-nav > .table > .contents > .content > .link::after {
-}
+
 /* sidebar */
 .sidebar {
   color: rgba(244, 243, 237, 1);
@@ -144,7 +144,7 @@ nav > .table > .contents > .content > .link::after {
 .card {
   background-color: rgba(244, 243, 237, 1);
   width: 70%;
-  min-height: 55vh;
+  min-height: 60vh;
   /* min-height: 100vh; */
   margin: auto;
   display: flex;
@@ -215,13 +215,13 @@ nav > .table > .contents > .content > .link::after {
 }
 
 /* loadpage */
+
 .loadpage {
   width: 100%;
-  height: 90vh;
+  height: 92vh;
   background-color: rgba(48, 23, 22, 0.5);
   display: flex;
-  /* justify-content: center; */
-  padding-left: 40%;
+  justify-content: center;
   align-items: center;
 }
 .loadpage > .loadimg {
@@ -337,4 +337,112 @@ nav > .table > .contents > .content > .link::after {
     transform: translateY(0%);
   }
 }
-/*  */
+/* cardInfo  */
+.cardboard {
+  width: 640px;
+  height: 400px;
+  position: fixed;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(53, 70, 53, 0.95);
+  z-index: 5;
+  color: rgba(244, 243, 237, 1);
+}
+.cardboard > .close {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.cardboard > .close > button {
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  background-color: rgba(48, 30, 68, 1);
+  color: rgba(244, 243, 237, 1);
+  border: 0px;
+  border-radius: 5px;
+}
+.cardboard > .cardboardInfo {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.cardboard > .cardboardInfo > .cbimg {
+  background-color: rgba(48, 23, 22, 1);
+  width: 270px;
+  height: 320px;
+  margin: 0 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.cardboard > .cardboardInfo > .cbimg:hover > .cbimgset {
+  transform: rotateY(180deg);
+}
+.cardboard > .cardboardInfo > .cbimg > .cbimgset {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  border-radius: 8px;
+  transition: 0.2s;
+  transform-style: preserve-3d;
+}
+.cardboard > .cardboardInfo > .cbimg > .cbimgset > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.frontimg,
+.backimg {
+  backface-visibility: hidden;
+  border-radius: 7px;
+}
+.backimg {
+  transform: rotateY(180deg);
+}
+.cardboard > .cardboardInfo > .cbimg > a {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.2s;
+  background-color: rgba(75, 162, 110, 1);
+  color: rgba(244, 243, 237, 1);
+  padding: 0 10px;
+  border-radius: 3px;
+}
+.cardboard > .cardboardInfo > .cbimg:hover > .imglink {
+  top: 78%;
+}
+.cardboard > .cardboardInfo > .cbicon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  object-fit: cover;
+  padding-top: 5px;
+}
+.cardboard > .cardboardInfo > .cbicon > .img {
+  width: 100%;
+}
+.cardboard > .cardboardInfo > .cbtext {
+  font-size: 24px;
+  width: 300px;
+  padding-right: 45px;
+}
+.cardboard > .cardboardInfo > .cbtext > div {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.cardboard > .cardboardInfo > .cbtext > div > p {
+  font-size: 16px;
+  margin: 0;
+  width: 100%;
+  display: block;
+}

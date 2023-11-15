@@ -24,7 +24,7 @@ export default function Home() {
     window.location.href = "/specifycard";
   }
   return (
-    <>
+    <div className={style.pageout}>
       <div className={style.loadpage}>
         <div className={style.loadimg}>
           <img className={style.imgfront} src="./img/cardback.png" alt="" />
@@ -43,6 +43,6 @@ export default function Home() {
           <p>.</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

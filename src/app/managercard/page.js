@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Sidebar from "@/components/Sidebarluler";
+import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
 import style from "../page.module.css";
 const page = () => {
@@ -38,6 +39,7 @@ const page = () => {
   return (
     <>
       <Sidebar rankAll={rankAll} test={ranktest}></Sidebar>
+      <CardInfo />
       <div className={style.card}>
         {cards.map((card, index) => (
           <div
