@@ -17,10 +17,14 @@ const Nav = (props) => {
       <div className={style.title}>Card Collection</div>
       <div className={style.table}>
         <ul className={style.contents}>
-          <li className={style.content}>
+          <li className={`${style.content} `}>
             <Link
               onClick={props.specify}
-              className={style.link}
+              className={
+                props.page === "specifycard"
+                  ? `${style.link} ${style.contentarrow}`
+                  : `${style.link}`
+              }
               href="/specifycard"
               scroll={false}
             >
@@ -30,7 +34,11 @@ const Nav = (props) => {
           <li className={style.content}>
             <Link
               onClick={props.magic}
-              className={style.link}
+              className={
+                props.page === "magiccard"
+                  ? `${style.link} ${style.contentarrow}`
+                  : `${style.link}`
+              }
               href="/magiccard"
               scroll={false}
             >
@@ -40,7 +48,11 @@ const Nav = (props) => {
           <li className={style.content}>
             <Link
               onClick={props.freeslot}
-              className={style.link}
+              className={
+                props.page === "freeslot"
+                  ? `${style.link} ${style.contentarrow}`
+                  : `${style.link}`
+              }
               href="/freeslot"
               scroll={false}
             >
@@ -50,7 +62,11 @@ const Nav = (props) => {
           <li className={style.content}>
             <Link
               onClick={props.manager}
-              className={style.link}
+              className={
+                props.page === "managercard"
+                  ? `${style.link} ${style.contentarrow}`
+                  : `${style.link}`
+              }
               href="/managercard"
               scroll={false}
             >

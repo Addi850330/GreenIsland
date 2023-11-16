@@ -1410,16 +1410,6 @@ export const data = [
         imgorigin: "./img/managercard/origin/3.jpg",
         description: "所有以非法手段進入貪婪之島的人都會被送往艾珍大陸的某處。",
       },
-      {
-        id: "nan",
-        number: "NaN",
-        name: "金粉少女護衛",
-        rank: "F",
-        img: "./img/managercard/sm/nan.png",
-        imgorigin: "./img/managercard/origin/nan.png",
-        description:
-          "金塵少女衛隊穿著西裝，打著領帶。他的頭髮梳理得很整齊，眉毛模糊，下巴裂開。最初，他表現得冷靜而專業，然而，當有人從豪宅中救出金粉女孩時，他變得好戰。",
-      },
     ],
   },
   {
@@ -1598,6 +1588,16 @@ export const data = [
         img: "./img/freeslot/sm/25008.png",
         imgorigin: "./img/freeslot/origin/25008.png",
         description: "一塊大岩石。如果有人被壓在下面，他們將無法毫髮無傷。",
+      },
+      {
+        id: "nan",
+        number: "NaN",
+        name: "金粉少女護衛",
+        rank: "F",
+        img: "./img/managercard/sm/nan.png",
+        imgorigin: "./img/managercard/origin/nan.png",
+        description:
+          "金塵少女衛隊穿著西裝，打著領帶。他的頭髮梳理得很整齊，眉毛模糊，下巴裂開。最初，他表現得冷靜而專業，然而，當有人從豪宅中救出金粉女孩時，他變得好戰。",
       },
     ],
   },

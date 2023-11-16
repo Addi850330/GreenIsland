@@ -46,11 +46,29 @@
 nav > .table > .contents > .content {
   padding: 0 30px;
   font-size: 1.2rem;
+  position: relative;
 }
-nav > .table > .contents > .content > .link {
-  color: rgba(244, 243, 237, 1);
+nav > .table > .contents > .content > .contentarrow::before {
+  content: " ";
+  background-image: url("../../public/icon/arrow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 12px;
+  height: 15px;
+  top: 7px;
+  left: 15px;
+  position: absolute;
+  z-index: 5;
 }
 
+nav > .table > .contents > .content > .link {
+  color: rgba(244, 243, 237, 1);
+  transition: 0.5s;
+}
+nav > .table > .contents > .content > .link:hover {
+  color: rgba(8, 177, 243, 1);
+}
 /* sidebar */
 .sidebar {
   color: rgba(244, 243, 237, 1);
@@ -63,7 +81,7 @@ nav > .table > .contents > .content > .link {
   align-items: center;
   position: fixed;
   top: 90px;
-  z-index: 1;
+  z-index: 2;
 }
 .sidebar > .numbermenu > div {
   font-size: 20px;
@@ -351,6 +369,25 @@ nav > .table > .contents > .content > .link {
   }
 }
 /* cardInfo  */
+.blackbgccl {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(48, 23, 22, 0);
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.blackbgcop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(48, 23, 22, 0.8);
+  z-index: 1;
+  transition: 0.2s;
+}
 .cardboard {
   width: 640px;
   height: 400px;
@@ -381,6 +418,16 @@ nav > .table > .contents > .content > .link {
   color: rgba(244, 243, 237, 1);
   border: 0px;
   border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  line-height: 0.9;
+}
+.cardboard > .close > button:hover {
+  background-color: rgb(73, 45, 105);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transform: translateY(-5px);
 }
 .cardboard > .cardboardInfo {
   display: flex;
@@ -435,6 +482,10 @@ nav > .table > .contents > .content > .link {
   padding: 0 10px;
   border-radius: 3px;
 }
+.cardboard > .cardboardInfo > .cbimg > a:hover {
+  box-shadow: rgba(8, 187, 241, 0.73) 0px 22px 70px 4px;
+}
+
 .cardboard > .cardboardInfo > .cbimg:hover > .imglink {
   top: 78%;
 }
@@ -462,4 +513,15 @@ nav > .table > .contents > .content > .link {
   margin: 0;
   width: 100%;
   display: block;
+}
+
+/* RWD */
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 744px) {
+}
+
+@media (max-width: 375px) {
 }

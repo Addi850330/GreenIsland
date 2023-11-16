@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Nav
+          page={page}
           testpage={testpage}
           specify={specifypage}
           magic={magicpage}
