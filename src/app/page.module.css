@@ -46,6 +46,7 @@
   border: 2px solid rgba(244, 243, 237, 1);
   border-radius: 5px;
   position: relative;
+  display: none;
 }
 .nav > .contentclose > .firstline {
   width: 24px;
@@ -258,7 +259,178 @@ nav > .table > .contents > .content > .link:hover {
   z-index: 7;
   transform: scale(0.7, 0.7);
 }
+/* hide sidebar list */
+.sidebar > .hideside {
+  position: absolute;
+  bottom: 50px;
+  right: -540px;
+}
+.sidebar > .hideside > .hidenumberlist {
+  position: relative;
+  right: 0px;
+  padding: 0;
+  top: -135px;
+}
+.sidebar > .hideside > .hidenumberlist > .listtitle,
+.number {
+  position: absolute;
+}
+.sidebar > .hideside > .hidenumberlist > .listtitle {
+  background-color: rgb(60, 112, 60);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  right: -35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  border: 5px solid rgba(53, 70, 53, 1);
+  transition: 0.3s;
+}
+.sidebar > .hideside > .hidenumberlist > .img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  object-fit: cover;
+  right: -30px;
+  top: 5px;
+  pointer-events: none;
+}
+.sidebar > .hideside > .hidenumberlist > .titleshow {
+  border: 5px solid rgb(60, 112, 60);
+  background-color: rgba(53, 70, 53, 1);
+}
+.sidebar > .hideside > .hidenumberlist > .number {
+  width: 60px;
+  top: 10px;
+  right: -40px;
+  height: 30px;
+  background-color: rgba(53, 70, 53, 0);
+  color: rgba(244, 243, 237, 0);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  transition: 0.2s;
 
+  cursor: pointer;
+}
+.sidebar > .hideside > .hidenumberlist > .numbershow1 {
+  background-color: rgba(53, 70, 53, 1);
+  color: rgba(244, 243, 237, 1);
+  right: 30px;
+  top: -25px;
+  border: 1px solid rgba(100, 134, 100, 1);
+}
+.sidebar > .hideside > .hidenumberlist > .numbershow2 {
+  background-color: rgba(53, 70, 53, 1);
+  color: rgba(244, 243, 237, 1);
+  right: 30px;
+  top: 10px;
+  border: 1px solid rgba(100, 134, 100, 1);
+}
+.sidebar > .hideside > .hidenumberlist > .numbershow3 {
+  background-color: rgba(53, 70, 53, 1);
+  color: rgba(244, 243, 237, 1);
+  right: 30px;
+  top: 45px;
+  border: 1px solid rgba(100, 134, 100, 1);
+}
+.sidebar > .hideside > .hideranklist {
+  position: relative;
+  padding: 0;
+  top: -200px;
+  right: -35px;
+}
+.sidebar > .hideside > .hideranklist>.img{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  object-fit: cover;
+  right: 5px;
+  top: 5px;
+  pointer-events: none;
+}
+.sidebar > .hideside > .hideranklist > .listtitlerank {
+  background-color: rgb(85, 53, 122);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid rgba(48, 30, 68, 1);
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+}
+.sidebar > .hideside > .hideranklist > .rankshow {
+  border: 5px solid rgb(85, 53, 122);
+  background-color: rgba(48, 30, 68, 1);
+}
+.sidebar > .hideside > .hideranklist > .hiderank {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(48, 30, 68, 1);
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  z-index: 1;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.sidebar > .hideside > .hideranklist > .rankshow1 {
+  right: 60px;
+  top: -70px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow2 {
+  right: 60px;
+  top: -20px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow3 {
+  right: 60px;
+  top: 30px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow4 {
+  right: 60px;
+  top: 80px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow5 {
+  right: 110px;
+  top: -70px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow6 {
+  right: 110px;
+  top: -20px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow7 {
+  right: 110px;
+  top: 30px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow8 {
+  right: 110px;
+  top: 80px;
+  border: 2px solid rgb(85, 53, 122);
+}
+.sidebar > .hideside > .hideranklist > .rankshow9 {
+  right: 160px;
+  top: 60px;
+  border: 2px solid rgb(85, 53, 122);
+}
 /* footer */
 .footer {
   width: 100%;
@@ -633,7 +805,6 @@ nav > .table > .contents > .content > .link:hover {
     left: 0px;
   }
   .card {
-    justify-content: flex-start;
     padding-left: 250px;
   }
   .card > .cardset {
@@ -641,9 +812,31 @@ nav > .table > .contents > .content > .link:hover {
   }
 }
 @media (max-width: 1024px) {
+  .nav > .icon {
+    /* margin-right: 75px; */
+    flex-grow: 1;
+  }
+  .nav > .title {
+    font-size: 2rem;
+    transform: translateX(10%);
+    /* margin-right: 20px; */
+    flex-grow: 2;
+  }
   .nav > .table > .contents {
     display: none;
   }
+  .nav > .contentclose {
+    display: block;
+    flex-grow: 0;
+  }
+  .card {
+    width: 65%;
+  }
+  .card > .cardset {
+    margin: 25px 20px 20px 20px;
+  }
+}
+@media (max-width: 926px) {
 }
 @media (max-width: 744px) {
 }
