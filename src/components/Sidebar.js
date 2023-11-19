@@ -80,14 +80,22 @@ const Sidebar = (props) => {
           <div
             onClick={opennumber}
             className={
-              hideNumber === "close"
-                ? `${style.listtitle}`
-                : `${style.listtitle} ${style.titleshow}`
+              hideNumber === "open"
+                ? `${style.listtitle} ${style.titleshow}`
+                : `${style.listtitle} `
             }
           >
             Num
           </div>
-          <img className={style.img} src="./icon/iconLight.png" alt="" />
+          <img
+            className={
+              hideNumber === "open"
+                ? `${style.img} ${style.opacity}`
+                : `${style.img}`
+            }
+            src="./icon/iconLight.png"
+            alt=""
+          />
           <li
             onClick={props.toNumber000}
             className={
@@ -130,7 +138,15 @@ const Sidebar = (props) => {
           >
             Rank
           </div>
-          <img className={style.img} src="./icon/iconLight.png" alt="" />
+          <img
+            className={
+              hideRank === "close"
+                ? `${style.img}`
+                : `${style.img} ${style.opacity}`
+            }
+            src="./icon/iconLight.png"
+            alt=""
+          />
           <li
             onClick={props.rankAll}
             className={

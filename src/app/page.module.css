@@ -264,6 +264,7 @@ nav > .table > .contents > .content > .link:hover {
   position: absolute;
   bottom: 50px;
   right: -540px;
+  display: none;
 }
 .sidebar > .hideside > .hidenumberlist {
   position: relative;
@@ -288,6 +289,11 @@ nav > .table > .contents > .content > .link:hover {
   border: 5px solid rgba(53, 70, 53, 1);
   transition: 0.3s;
 }
+.sidebar > .hideside > .hidenumberlist > .titleshow {
+  border: 5px solid rgb(60, 112, 60);
+  background-color: rgba(53, 70, 53, 1);
+  color: rgba(240, 248, 255, 0);
+}
 .sidebar > .hideside > .hidenumberlist > .img {
   position: absolute;
   width: 40px;
@@ -297,11 +303,14 @@ nav > .table > .contents > .content > .link:hover {
   right: -30px;
   top: 5px;
   pointer-events: none;
+  opacity: 0;
+  transition: 0.3s;
 }
-.sidebar > .hideside > .hidenumberlist > .titleshow {
-  border: 5px solid rgb(60, 112, 60);
-  background-color: rgba(53, 70, 53, 1);
+.sidebar > .hideside > .hidenumberlist > .opacity {
+  opacity: 1;
+  transform: rotate(-180deg);
 }
+
 .sidebar > .hideside > .hidenumberlist > .number {
   width: 60px;
   top: 10px;
@@ -343,7 +352,7 @@ nav > .table > .contents > .content > .link:hover {
   top: -200px;
   right: -35px;
 }
-.sidebar > .hideside > .hideranklist>.img{
+.sidebar > .hideside > .hideranklist > .img {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -352,6 +361,12 @@ nav > .table > .contents > .content > .link:hover {
   right: 5px;
   top: 5px;
   pointer-events: none;
+  transition: 0.3s;
+  opacity: 0;
+}
+.sidebar > .hideside > .hideranklist > .opacity {
+  opacity: 1;
+  transform: rotate(180deg);
 }
 .sidebar > .hideside > .hideranklist > .listtitlerank {
   background-color: rgb(85, 53, 122);
@@ -371,12 +386,14 @@ nav > .table > .contents > .content > .link:hover {
 .sidebar > .hideside > .hideranklist > .rankshow {
   border: 5px solid rgb(85, 53, 122);
   background-color: rgba(48, 30, 68, 1);
+  color: rgba(240, 248, 255, 0);
 }
 .sidebar > .hideside > .hideranklist > .hiderank {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(48, 30, 68, 1);
+  background-color: rgba(48, 30, 68, 0);
+  color: rgba(244, 243, 237, 0);
   text-align: center;
   line-height: 40px;
   position: absolute;
@@ -389,46 +406,64 @@ nav > .table > .contents > .content > .link:hover {
 .sidebar > .hideside > .hideranklist > .rankshow1 {
   right: 60px;
   top: -70px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow2 {
   right: 60px;
   top: -20px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow3 {
   right: 60px;
   top: 30px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow4 {
   right: 60px;
   top: 80px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow5 {
   right: 110px;
   top: -70px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow6 {
   right: 110px;
   top: -20px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow7 {
   right: 110px;
   top: 30px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow8 {
   right: 110px;
   top: 80px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 .sidebar > .hideside > .hideranklist > .rankshow9 {
   right: 160px;
   top: 60px;
+  color: rgba(244, 243, 237, 1);
+  background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
 /* footer */
@@ -837,6 +872,9 @@ nav > .table > .contents > .content > .link:hover {
   }
 }
 @media (max-width: 926px) {
+  .sidebar > .hideside {
+    display: block;
+  }
 }
 @media (max-width: 744px) {
 }
