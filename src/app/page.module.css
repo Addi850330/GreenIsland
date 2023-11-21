@@ -1,3 +1,4 @@
+/* layout--------------------------------start */
 /* nav */
 .nav {
   display: flex;
@@ -173,6 +174,19 @@ nav > .table > .contents > .content > .link {
 nav > .table > .contents > .content > .link:hover {
   color: rgba(8, 177, 243, 1);
 }
+.hidenavbgc {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(48, 23, 22, 0.8);
+  z-index: 3;
+  display: none;
+  transition: 0.2s;
+}
+.hidenavbgcclose {
+  background-color: rgba(48, 23, 22, 0);
+  pointer-events: none;
+}
 /* sidebar */
 .sidebar {
   color: rgba(244, 243, 237, 1);
@@ -260,24 +274,26 @@ nav > .table > .contents > .content > .link:hover {
   transform: scale(0.7, 0.7);
 }
 /* hide sidebar list */
-.sidebar > .hideside {
-  position: absolute;
-  bottom: 50px;
-  right: -540px;
+.hideside {
+  position: fixed;
+  bottom: 10px;
+  right: 15%;
   display: none;
+  z-index: 5;
 }
-.sidebar > .hideside > .hidenumberlist {
+.hideside > .hidenumberlist {
   position: relative;
   right: 0px;
   padding: 0;
   top: -135px;
 }
-.sidebar > .hideside > .hidenumberlist > .listtitle,
+.hideside > .hidenumberlist > .listtitle,
 .number {
   position: absolute;
 }
-.sidebar > .hideside > .hidenumberlist > .listtitle {
+.hideside > .hidenumberlist > .listtitle {
   background-color: rgb(60, 112, 60);
+  color: rgba(244, 243, 237, 1);
   z-index: 2;
   width: 40px;
   height: 40px;
@@ -289,12 +305,12 @@ nav > .table > .contents > .content > .link:hover {
   border: 5px solid rgba(53, 70, 53, 1);
   transition: 0.3s;
 }
-.sidebar > .hideside > .hidenumberlist > .titleshow {
+.hideside > .hidenumberlist > .titleshow {
   border: 5px solid rgb(60, 112, 60);
   background-color: rgba(53, 70, 53, 1);
   color: rgba(240, 248, 255, 0);
 }
-.sidebar > .hideside > .hidenumberlist > .img {
+.hideside > .hidenumberlist > .img {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -306,12 +322,12 @@ nav > .table > .contents > .content > .link:hover {
   opacity: 0;
   transition: 0.3s;
 }
-.sidebar > .hideside > .hidenumberlist > .opacity {
+.hideside > .hidenumberlist > .opacity {
   opacity: 1;
   transform: rotate(-180deg);
 }
 
-.sidebar > .hideside > .hidenumberlist > .number {
+.hideside > .hidenumberlist > .number {
   width: 60px;
   top: 10px;
   right: -40px;
@@ -322,37 +338,36 @@ nav > .table > .contents > .content > .link:hover {
   line-height: 30px;
   border-radius: 5px;
   transition: 0.2s;
-
   cursor: pointer;
 }
-.sidebar > .hideside > .hidenumberlist > .numbershow1 {
+.hideside > .hidenumberlist > .numbershow1 {
   background-color: rgba(53, 70, 53, 1);
   color: rgba(244, 243, 237, 1);
   right: 30px;
   top: -25px;
   border: 1px solid rgba(100, 134, 100, 1);
 }
-.sidebar > .hideside > .hidenumberlist > .numbershow2 {
+.hideside > .hidenumberlist > .numbershow2 {
   background-color: rgba(53, 70, 53, 1);
   color: rgba(244, 243, 237, 1);
   right: 30px;
   top: 10px;
   border: 1px solid rgba(100, 134, 100, 1);
 }
-.sidebar > .hideside > .hidenumberlist > .numbershow3 {
+.hideside > .hidenumberlist > .numbershow3 {
   background-color: rgba(53, 70, 53, 1);
   color: rgba(244, 243, 237, 1);
   right: 30px;
   top: 45px;
   border: 1px solid rgba(100, 134, 100, 1);
 }
-.sidebar > .hideside > .hideranklist {
+.hideside > .hideranklist {
   position: relative;
   padding: 0;
   top: -200px;
   right: -35px;
 }
-.sidebar > .hideside > .hideranklist > .img {
+.hideside > .hideranklist > .img {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -364,12 +379,13 @@ nav > .table > .contents > .content > .link:hover {
   transition: 0.3s;
   opacity: 0;
 }
-.sidebar > .hideside > .hideranklist > .opacity {
+.hideside > .hideranklist > .opacity {
   opacity: 1;
   transform: rotate(180deg);
 }
-.sidebar > .hideside > .hideranklist > .listtitlerank {
+.hideside > .hideranklist > .listtitlerank {
   background-color: rgb(85, 53, 122);
+  color: rgba(244, 243, 237, 1);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -383,12 +399,12 @@ nav > .table > .contents > .content > .link:hover {
   top: 0px;
   z-index: 2;
 }
-.sidebar > .hideside > .hideranklist > .rankshow {
+.hideside > .hideranklist > .rankshow {
   border: 5px solid rgb(85, 53, 122);
   background-color: rgba(48, 30, 68, 1);
   color: rgba(240, 248, 255, 0);
 }
-.sidebar > .hideside > .hideranklist > .hiderank {
+.hideside > .hideranklist > .hiderank {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -403,65 +419,65 @@ nav > .table > .contents > .content > .link:hover {
   transition: 0.2s;
   cursor: pointer;
 }
-.sidebar > .hideside > .hideranklist > .rankshow1 {
+.hideside > .hideranklist > .rankshow1 {
   right: 60px;
   top: -70px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow2 {
+.hideside > .hideranklist > .rankshow2 {
   right: 60px;
   top: -20px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow3 {
+.hideside > .hideranklist > .rankshow3 {
   right: 60px;
   top: 30px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow4 {
+.hideside > .hideranklist > .rankshow4 {
   right: 60px;
   top: 80px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow5 {
+.hideside > .hideranklist > .rankshow5 {
   right: 110px;
   top: -70px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow6 {
+.hideside > .hideranklist > .rankshow6 {
   right: 110px;
   top: -20px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow7 {
+.hideside > .hideranklist > .rankshow7 {
   right: 110px;
   top: 30px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow8 {
+.hideside > .hideranklist > .rankshow8 {
   right: 110px;
   top: 80px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-.sidebar > .hideside > .hideranklist > .rankshow9 {
+.hideside > .hideranklist > .rankshow9 {
   right: 160px;
-  top: 60px;
+  top: -70px;
   color: rgba(244, 243, 237, 1);
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
@@ -479,7 +495,7 @@ nav > .table > .contents > .content > .link:hover {
   color: rgba(244, 243, 237, 1);
   font-size: 20px;
 }
-
+/* layout--------------------------------end */
 /* card */
 
 .card {
@@ -848,7 +864,6 @@ nav > .table > .contents > .content > .link:hover {
 }
 @media (max-width: 1024px) {
   .nav > .icon {
-    /* margin-right: 75px; */
     flex-grow: 1;
   }
   .nav > .title {
@@ -864,20 +879,99 @@ nav > .table > .contents > .content > .link:hover {
     display: block;
     flex-grow: 0;
   }
+  .hidenavbgc {
+    display: block;
+  }
   .card {
-    width: 65%;
+    width: 60%;
+    padding-left: 200px;
   }
   .card > .cardset {
     margin: 25px 20px 20px 20px;
   }
 }
 @media (max-width: 926px) {
-  .sidebar > .hideside {
+  .nav > .title {
+    transform: translateX(-3%);
+  }
+  .nav > .contentclose {
+    margin-right: 5%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .hideside {
     display: block;
+  }
+  .card {
+    width: 70%;
+    padding-left: 10%;
+    padding-right: 0px;
+  }
+  .card > .cardset {
+    margin-left: 0px;
+    margin-right: 5%;
+  }
+  .card > .cardset:hover .cardtitle {
+    bottom: -50px;
   }
 }
 @media (max-width: 744px) {
+  .nav > .icon {
+    margin-left: 30px;
+  }
+  .nav > .title {
+    font-size: 1.5rem;
+  }
+  .nav > .contentclose {
+    margin-right: 1%;
+  }
+  .card {
+    width: 80%;
+    padding-left: 6%;
+    padding-right: 0;
+  }
+  .card > .cardset > .cardtitle {
+    bottom: -50px;
+  }
+  .card > .cardset:hover .cardtitle {
+    bottom: -50px;
+  }
 }
 
 @media (max-width: 375px) {
+  .nav > .icon {
+    margin-left: 5%;
+  }
+  .nav > .icon > .text {
+    display: none;
+  }
+  .nav > .title {
+    transform: translateX(0%);
+  }
+  .nav > .contentclose {
+    margin-right: -5%;
+  }
+  .cardboard {
+    display: none;
+  }
+  .blackbgccl {
+    display: none;
+  }
+  .blackbgcop {
+    display: none;
+  }
+  .card {
+    padding-left: 5%;
+  }
+  .card > .cardset {
+    width: 134px;
+    height: 190px;
+  }
+  .hideside {
+    right: 20%;
+  }
+  .footer {
+    font-size: 1rem;
+  }
 }

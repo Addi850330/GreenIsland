@@ -121,7 +121,10 @@ const Nav = (props) => {
         >
           <li className={style.content}>
             <Link
-              onClick={props.specify}
+              onClick={(event) => {
+                props.specify();
+                navswitch(event);
+              }}
               className={
                 props.page === "specifycard"
                   ? `${style.link} ${style.nharrow}`
@@ -135,7 +138,10 @@ const Nav = (props) => {
           </li>
           <li className={style.content}>
             <Link
-              onClick={props.magic}
+              onClick={(event) => {
+                props.magic();
+                navswitch(event);
+              }}
               className={
                 props.page === "magiccard"
                   ? `${style.link} ${style.nharrow}`
@@ -149,7 +155,10 @@ const Nav = (props) => {
           </li>
           <li className={style.content}>
             <Link
-              onClick={props.freeslot}
+              onClick={(event) => {
+                props.freeslot();
+                navswitch(event);
+              }}
               className={
                 props.page === "freeslot"
                   ? `${style.link} ${style.nharrow}`
@@ -163,7 +172,10 @@ const Nav = (props) => {
           </li>
           <li className={style.content}>
             <Link
-              onClick={props.manager}
+              onClick={(event) => {
+                props.manager();
+                navswitch(event);
+              }}
               className={
                 props.page === "managercard"
                   ? `${style.link} ${style.nharrow}`
@@ -177,6 +189,14 @@ const Nav = (props) => {
           </li>
         </ul>
       </nav>
+      <div
+        onClick={navswitch}
+        className={
+          navhide === "open"
+            ? `${style.hidenavbgc}`
+            : `${style.hidenavbgc} ${style.hidenavbgcclose}`
+        }
+      ></div>
     </>
   );
 };
