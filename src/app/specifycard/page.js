@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Sidebar from "../../components/Sidebar";
 import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
@@ -148,7 +149,6 @@ const page = () => {
   const [carddescription, setCarddescription] = useState("");
   const [cardimg, setCardimg] = useState("");
   const [cardimgorigin, setCardimgorigin] = useState("");
-
   const [windowSwitch, setWindowSwitch] = useState("close");
 
   const cardInfo = function (e) {
@@ -209,6 +209,9 @@ const page = () => {
               <button>
                 <img name={card.id} src={card.img} alt={card.name} />
               </button>
+              <Link href="/specifycard/001" className={style.mobilepage}>
+              <img name={card.id} src={card.img} alt={card.name} />
+              </Link>
             </div>
             <p className={style.cardtitle}>
               {card.number} {card.name}
