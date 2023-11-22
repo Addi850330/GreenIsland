@@ -209,8 +209,12 @@ const page = () => {
               <button>
                 <img name={card.id} src={card.img} alt={card.name} />
               </button>
-              <Link href="/specifycard/001" className={style.mobilepage}>
-              <img name={card.id} src={card.img} alt={card.name} />
+              <Link
+                href={`/specifycard/${card.id}`}
+                className={style.mobilepage}
+                target="_blank"
+              >
+                <img name={card.id} src={card.img} alt={card.name} />
               </Link>
             </div>
             <p className={style.cardtitle}>

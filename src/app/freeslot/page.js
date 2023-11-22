@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Sidebar from "../../components/Sidebarfreeslot";
 import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
@@ -151,6 +152,13 @@ const page = () => {
               <button>
                 <img name={card.id} src={card.img} alt={card.name} />
               </button>
+              <Link
+                href={`/freeslot/${card.id}`}
+                className={style.mobilepage}
+                target="_blank"
+              >
+                <img name={card.id} src={card.img} alt={card.name} />
+              </Link>
             </div>
             <p className={style.cardtitle}>
               {card.number} {card.name}
