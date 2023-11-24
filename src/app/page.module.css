@@ -991,3 +991,72 @@ nav > .table > .contents > .content > .link:hover {
     font-size: 1rem;
   }
 }
+
+/* mobile cardinfo */
+
+.mcard {
+  background-color: rgba(244, 243, 237, 1);
+  width: 80%;
+  min-height: 55vh;
+  /* min-height: 100vh; */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 25vh;
+  padding-bottom: 200px;
+  overflow: hidden;
+}
+.mcard > .mcardimg {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  overflow: hidden;
+  margin-right: 5%;
+}
+.mcard > .mcardimg > img {
+  width: 100%;
+  object-fit: contain;
+}
+.mcard > .mcardinfo {
+  width: 300px;
+  font-size: 1.5rem;
+}
+.mcard > .mcardinfo > div {
+  margin-bottom: 1rem;
+}
+.mcard > .mcardinfo > .downloadcard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mcard > .mcardinfo > .downloadcard > .mcardlink {
+  color: rgba(75, 162, 110, 1);
+  background-color: black;
+  padding: 8px 24px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+@media (max-width: 744px) {
+  .mcard > .mcardimg {
+    margin-right: 0%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 488px) {
+  .mcard {
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+  }
+  .mcard > .mcardimg {
+    width: 192px;
+    height: 277px;
+  }
+  .mcard > .mcardinfo {
+    width: 192px;
+    font-size: 1.2rem;
+  }
+  .mcard > .mcardinfo > div {
+    margin-bottom: 5px;
+  }
+}
