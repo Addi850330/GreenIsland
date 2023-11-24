@@ -1010,7 +1010,7 @@ nav > .table > .contents > .content > .link:hover {
 .mcard > .mcardimg {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   overflow: hidden;
   margin-right: 5%;
 }

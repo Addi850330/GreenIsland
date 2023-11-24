@@ -1,12 +1,23 @@
 "use client";
 import { React, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import "./globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 export default function RootLayout({ children }) {
-  const [page, setPage] = useState("specifycard");
+  const [page, setPage] = useState("");
+
+  const pathname = usePathname();
+  useEffect(() => {
+    if (pathname === "/specifycard") {
+      setPage("specifycard");
+    }
+    if (pathname === "/magiccard") setPage("magiccard");
+    if (pathname === "/managercard") setPage("managercard");
+    if (pathname === "freeslot") setPage("freeslot");
+  }, []);
 
   const specifypage = function () {
     setPage("specifycard");
@@ -30,6 +41,7 @@ export default function RootLayout({ children }) {
       once: false,
     });
   }, []);
+
   return (
     <html lang="en">
       <body>
