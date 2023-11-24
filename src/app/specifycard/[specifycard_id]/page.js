@@ -3,10 +3,13 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { data } from "../../data";
 import style from "../../page.module.css";
+import { notFound } from "next/navigation";
 
 const Post = ({ params }) => {
   const specifycard_id = params.specifycard_id;
-
+  if (specifycard_id < 0 || specifycard_id > 100 || isNaN(specifycard_id)) {
+    notFound();
+  }
   const [cardname, setCardname] = useState("");
   const [cardrank, setCardrank] = useState("");
   const [cardnumber, setCardnumber] = useState("");
