@@ -1384,7 +1384,7 @@ export const data = [
   {
     managercard: [
       {
-        id: -100,
+        id: -1,
         number: "-001",
         name: "掌握",
         rank: "-",
@@ -1393,7 +1393,7 @@ export const data = [
         description: "停止 NPC 或敵人的行動。",
       },
       {
-        id: -200,
+        id: -2,
         number: "-002",
         name: "虛無",
         rank: "-",
@@ -1402,7 +1402,7 @@ export const data = [
         description: "重製一名玩家的所有卡片數據。",
       },
       {
-        id: -300,
+        id: -3,
         number: "-003",
         name: "排除",
         rank: "-",

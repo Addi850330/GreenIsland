@@ -7,9 +7,7 @@ import { notFound } from "next/navigation";
 
 const Post = ({ params }) => {
   const specifycard_id = params.specifycard_id;
-  if (specifycard_id < 0 || specifycard_id > 100 || isNaN(specifycard_id)) {
-    notFound();
-  }
+
   const [cardname, setCardname] = useState("");
   const [cardrank, setCardrank] = useState("");
   const [cardnumber, setCardnumber] = useState("");
@@ -20,7 +18,11 @@ const Post = ({ params }) => {
   const cardid = specifycard_id;
   const datas = data[0].specifycard;
 
+  const found = datas.find((obj) => obj.id == cardid);
   useEffect(() => {
+    if (found == undefined) {
+      notFound();
+    }
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -53,7 +55,13 @@ const Post = ({ params }) => {
             {carddescription}
           </div>
           <div className={style.downloadcard}>
-            <Link href={`.${cardimgorigin}`} className={style.mcardlink}>
+            <Link
+              href={`.${cardimgorigin}`}
+              download={cardname}
+              target="_blank"
+              className={style.mcardlink}
+              rel="noopener noreferrer"
+            >
               Dowload
             </Link>
           </div>

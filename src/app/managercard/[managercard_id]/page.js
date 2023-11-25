@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { data } from "../../data";
 import style from "../../page.module.css";
+import { notFound } from "next/navigation";
 
 const Post = ({ params }) => {
   const managercard_id = params.managercard_id;
@@ -17,7 +18,12 @@ const Post = ({ params }) => {
   const cardid = managercard_id;
   const datas = data[2].managercard;
 
+  const found = datas.find((obj) => obj.id == cardid);
+
   useEffect(() => {
+    if (found == undefined) {
+      notFound();
+    }
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -50,7 +56,13 @@ const Post = ({ params }) => {
             {carddescription}
           </div>
           <div className={style.downloadcard}>
-            <Link href={`.${cardimgorigin}`} className={style.mcardlink}>
+            <Link
+              href={`.${cardimgorigin}`}
+              download={cardname}
+              target="_blank"
+              className={style.mcardlink}
+              rel="noopener noreferrer"
+            >
               Dowload
             </Link>
           </div>

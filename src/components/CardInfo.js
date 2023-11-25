@@ -26,7 +26,11 @@ const CardInfo = (props) => {
         <div className={style.cardboardInfo}>
           <div className={style.cbimg}>
             <div className={style.cbimgset}>
-              <img className={style.backimg} src="./img/cardback.png" alt="" />
+              <img
+                className={style.backimg}
+                src="./img/cardbackold.png"
+                alt=""
+              />
               <img className={style.frontimg} src={props.img} alt="" />
             </div>
             <Link
