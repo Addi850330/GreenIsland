@@ -60,6 +60,7 @@ const Nav = (props) => {
                     : `${style.link}`
                 }
                 href="/specifycard"
+                rel="noopener"
                 scroll={false}
               >
                 指定口袋
@@ -74,6 +75,7 @@ const Nav = (props) => {
                     : `${style.link}`
                 }
                 href="/magiccard"
+                rel="noopener"
                 scroll={false}
               >
                 咒語卡
@@ -88,6 +90,7 @@ const Nav = (props) => {
                     : `${style.link}`
                 }
                 href="/freeslot"
+                rel="noopener"
                 scroll={false}
               >
                 自由口袋
@@ -102,6 +105,7 @@ const Nav = (props) => {
                     : `${style.link}`
                 }
                 href="/managercard"
+                rel="noopener"
                 scroll={false}
               >
                 管理者
@@ -131,6 +135,7 @@ const Nav = (props) => {
                   : `${style.link}`
               }
               href="/specifycard"
+              rel="noopener"
               scroll={false}
             >
               指定口袋
@@ -148,6 +153,7 @@ const Nav = (props) => {
                   : `${style.link} `
               }
               href="/magiccard"
+              rel="noopener"
               scroll={false}
             >
               咒語卡
@@ -165,6 +171,7 @@ const Nav = (props) => {
                   : `${style.link} `
               }
               href="/freeslot"
+              rel="noopener"
               scroll={false}
             >
               自由口袋
@@ -182,6 +189,7 @@ const Nav = (props) => {
                   : `${style.link} `
               }
               href="/managercard"
+              rel="noopener"
               scroll={false}
             >
               管理者

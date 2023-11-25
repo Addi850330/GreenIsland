@@ -21,6 +21,12 @@ const Sidebar = (props) => {
       setHideRank("close");
     }
   };
+  const chocenum = function () {
+    setHideNumber("close");
+  };
+  const chocerank = function () {
+    setHideRank("close");
+  };
   return (
     <>
       <div className={style.sidebar}>
@@ -118,6 +124,7 @@ const Sidebar = (props) => {
           />
 
           <li
+            onClick={chocenum}
             className={
               hideNumber === "close"
                 ? `${style.number}`
@@ -148,7 +155,10 @@ const Sidebar = (props) => {
             alt=""
           />
           <li
-            onClick={props.rankAll}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankAll();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -158,7 +168,10 @@ const Sidebar = (props) => {
             All
           </li>
           <li
-            onClick={props.rankB}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankB();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -168,7 +181,10 @@ const Sidebar = (props) => {
             B
           </li>
           <li
-            onClick={props.rankC}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankC();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -178,7 +194,10 @@ const Sidebar = (props) => {
             C
           </li>
           <li
-            onClick={props.rankD}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankD();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -188,7 +207,10 @@ const Sidebar = (props) => {
             D
           </li>
           <li
-            onClick={props.rankE}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankE();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -198,7 +220,10 @@ const Sidebar = (props) => {
             E
           </li>
           <li
-            onClick={props.rankF}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankF();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -208,7 +233,10 @@ const Sidebar = (props) => {
             F
           </li>
           <li
-            onClick={props.rankG}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankG();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -218,7 +246,10 @@ const Sidebar = (props) => {
             G
           </li>
           <li
-            onClick={props.rankH}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankH();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -228,7 +259,10 @@ const Sidebar = (props) => {
             H
           </li>
           <li
-            onClick={props.rankSS}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankSS();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -238,6 +272,22 @@ const Sidebar = (props) => {
             SS
           </li>
         </ul>
+        <div
+          onClick={rankshow}
+          className={
+            hideRank === "close"
+              ? `${style.rankshowbg} ${style.rankbgclose}`
+              : `${style.rankshowbg} `
+          }
+        ></div>
+        <div
+          onClick={opennumber}
+          className={
+            hideNumber === "close"
+              ? `${style.numbershowbg} ${style.numberbgclose}`
+              : `${style.numbershowbg} `
+          }
+        ></div>
       </div>
     </>
   );

@@ -21,6 +21,12 @@ const Sidebar = (props) => {
       setHideRank("close");
     }
   };
+  const chocenum = function () {
+    setHideNumber("close");
+  };
+  const chocerank = function () {
+    setHideRank("close");
+  };
   return (
     <>
       <div className={style.sidebar}>
@@ -74,7 +80,7 @@ const Sidebar = (props) => {
           />
 
           <li
-            onClick={props.toNumber032}
+            onClick={chocenum}
             className={
               hideNumber === "close"
                 ? `${style.number}`
@@ -105,7 +111,10 @@ const Sidebar = (props) => {
             alt=""
           />
           <li
-            onClick={props.rankAll}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankAll();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -115,6 +124,22 @@ const Sidebar = (props) => {
             All
           </li>
         </ul>
+        <div
+          onClick={rankshow}
+          className={
+            hideRank === "close"
+              ? `${style.rankshowbg} ${style.rankbgclose}`
+              : `${style.rankshowbg} `
+          }
+        ></div>
+        <div
+          onClick={opennumber}
+          className={
+            hideNumber === "close"
+              ? `${style.numbershowbg} ${style.numberbgclose}`
+              : `${style.numbershowbg} `
+          }
+        ></div>
       </div>
     </>
   );

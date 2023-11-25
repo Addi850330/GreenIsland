@@ -14,6 +14,8 @@
   left: 0;
   z-index: 5;
   height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .nav > .icon {
   display: flex;
@@ -200,6 +202,7 @@ nav > .table > .contents > .content > .link:hover {
   position: fixed;
   top: 90px;
   z-index: 2;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .sidebar > .numbermenu > div {
   font-size: 20px;
@@ -280,6 +283,32 @@ nav > .table > .contents > .content > .link:hover {
   right: 15%;
   display: none;
   z-index: 5;
+}
+.hideside > .rankshowbg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(215, 29, 29, 0);
+  z-index: 0;
+}
+.hideside > .rankbgclose {
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+.hideside > .numbershowbg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(215, 29, 29, 0);
+  z-index: 0;
+}
+.hideside >.numberbgclose{
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
 }
 .hideside > .hidenumberlist {
   position: relative;
@@ -594,8 +623,9 @@ nav > .table > .contents > .content > .link:hover {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 100%;
+  width: 110%;
   transition: 0.2s;
+  opacity: 0;
 }
 .card > .cardset:hover .cardinfo {
   transition: 0.3s;
@@ -606,6 +636,7 @@ nav > .table > .contents > .content > .link:hover {
 }
 .card > .cardset:hover .cardtitle {
   bottom: -60px;
+  opacity: 1;
 }
 .card > .cardset > .cardinfo > button {
   width: 100%;
@@ -1131,6 +1162,14 @@ nav > .table > .contents > .content > .link:hover {
   .card > .cardset {
     width: 134px;
     height: 190px;
+  }
+  .card > .cardset > .cardtitle {
+    opacity: 1;
+    height: 37px;
+  }
+  .card > .cardset:hover .cardinfo {
+    transform: translate(0, 0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .card > .cardset > .cardinfo > .mobilepage {
     display: block;

@@ -37,6 +37,7 @@ const CardInfo = (props) => {
               className={style.imglink}
               href={props.imgorigin}
               target="_blank"
+              rel="noopener"
             >
               Download
             </Link>

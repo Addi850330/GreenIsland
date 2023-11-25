@@ -21,6 +21,13 @@ const Sidebar = (props) => {
       setHideRank("close");
     }
   };
+  const chocenum = function () {
+    setHideNumber("close");
+  };
+  const chocerank = function () {
+    setHideRank("close");
+  };
+
   return (
     <>
       <div className={style.sidebar}>
@@ -99,7 +106,10 @@ const Sidebar = (props) => {
             alt=""
           />
           <li
-            onClick={props.toNumber000}
+            onClick={(e) => {
+              chocenum(e);
+              props.toNumber000();
+            }}
             className={
               hideNumber === "close"
                 ? `${style.number}`
@@ -109,7 +119,10 @@ const Sidebar = (props) => {
             000~
           </li>
           <li
-            onClick={props.toNumber032}
+            onClick={(e) => {
+              chocenum(e);
+              props.toNumber032();
+            }}
             className={
               hideNumber === "close"
                 ? `${style.number}`
@@ -119,7 +132,10 @@ const Sidebar = (props) => {
             032~
           </li>
           <li
-            onClick={props.toNumber064}
+            onClick={(e) => {
+              chocenum(e);
+              props.toNumber064();
+            }}
             className={
               hideNumber === "close"
                 ? `${style.number}`
@@ -150,7 +166,10 @@ const Sidebar = (props) => {
             alt=""
           />
           <li
-            onClick={props.rankAll}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankAll();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -160,7 +179,10 @@ const Sidebar = (props) => {
             All
           </li>
           <li
-            onClick={props.rankA}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankA();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -170,7 +192,10 @@ const Sidebar = (props) => {
             A
           </li>
           <li
-            onClick={props.rankB}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankB();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -180,7 +205,10 @@ const Sidebar = (props) => {
             B
           </li>
           <li
-            onClick={props.rankD}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankD();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -190,7 +218,10 @@ const Sidebar = (props) => {
             D
           </li>
           <li
-            onClick={props.rankS}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankS();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -200,7 +231,10 @@ const Sidebar = (props) => {
             S
           </li>
           <li
-            onClick={props.rankSS}
+            onClick={(e) => {
+              chocerank(e);
+              props.rankSS();
+            }}
             className={
               hideRank === "close"
                 ? `${style.hiderank}`
@@ -210,6 +244,22 @@ const Sidebar = (props) => {
             SS
           </li>
         </ul>
+        <div
+          onClick={rankshow}
+          className={
+            hideRank === "close"
+              ? `${style.rankshowbg} ${style.rankbgclose}`
+              : `${style.rankshowbg} `
+          }
+        ></div>
+        <div
+          onClick={opennumber}
+          className={
+            hideNumber === "close"
+              ? `${style.numbershowbg} ${style.numberbgclose}`
+              : `${style.numbershowbg} `
+          }
+        ></div>
       </div>
     </>
   );
