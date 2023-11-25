@@ -482,7 +482,7 @@ nav > .table > .contents > .content > .link:hover {
   background-color: rgb(48, 30, 68);
   border: 2px solid rgb(85, 53, 122);
 }
-/* footer */
+/* footer -----------------------------*/
 .footer {
   width: 100%;
   background-color: rgba(48, 23, 22, 1);
@@ -495,8 +495,70 @@ nav > .table > .contents > .content > .link:hover {
   color: rgba(244, 243, 237, 1);
   font-size: 20px;
 }
-/* layout--------------------------------end */
-/* card */
+
+/* loadin page--------------------------- */
+.loadanimel {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 10vh;
+  left: 10%;
+  overflow: hidden;
+  z-index: 1;
+}
+.loadanimel > img {
+  width: 100%;
+  height: 100%;
+}
+.loadanimelb {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 10vh;
+  left: 5%;
+  z-index: 0;
+}
+.loadanimelb > img {
+  width: 100%;
+  height: 100%;
+}
+.loadanimem {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+  left: 35%;
+}
+.loadanimem > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.loadanimer {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  bottom: 10vh;
+  right: 10%;
+  z-index: 1;
+}
+.loadanimer > img {
+  width: 100%;
+  height: 100%;
+}
+.loadanimerb {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  bottom: 10vh;
+  right: 5%;
+  z-index: 0;
+}
+.loadanimerb > img {
+  width: 100%;
+  height: 100%;
+}
+/* card -----------------------------------*/
 
 .card {
   background-color: rgba(244, 243, 237, 1);
@@ -593,6 +655,7 @@ nav > .table > .contents > .content > .link:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .loadpage > .loadimg {
   position: relative;
@@ -868,6 +931,22 @@ nav > .table > .contents > .content > .link:hover {
   .nav > .table > .contents > .content > .contentarrow::before {
     left: 0px;
   }
+  .loadanimel {
+    width: 300px;
+    height: 400px;
+  }
+  .loadanimer {
+    width: 300px;
+    height: 400px;
+  }
+  .loadanimelb {
+    width: 300px;
+    height: 400px;
+  }
+  .loadanimerb {
+    width: 300px;
+    height: 400px;
+  }
   .card {
     padding-left: 250px;
   }
@@ -895,6 +974,25 @@ nav > .table > .contents > .content > .link:hover {
   .hidenavbgc {
     display: block;
   }
+  .loadanimel {
+    width: 250px;
+    height: 350px;
+  }
+  .loadanimelb {
+    width: 250px;
+    height: 350px;
+  }
+  .loadanimem {
+    left: 30%;
+  }
+  .loadanimer {
+    width: 250px;
+    height: 350px;
+  }
+  .loadanimerb {
+    width: 250px;
+    height: 350px;
+  }
   .card {
     width: 60%;
     padding-left: 200px;
@@ -915,6 +1013,11 @@ nav > .table > .contents > .content > .link:hover {
   }
   .hideside {
     display: block;
+  }
+  .loadanimem {
+    width: 400px;
+    height: 150px;
+    left: 35%;
   }
   .card {
     width: 70%;
@@ -938,6 +1041,33 @@ nav > .table > .contents > .content > .link:hover {
   }
   .nav > .contentclose {
     margin-right: 1%;
+  }
+  .loadanimel {
+    top: 13vh;
+    width: 220px;
+    height: 300px;
+    left: 5%;
+  }
+  .loadanimelb {
+    top: 13vh;
+    width: 220px;
+    height: 300px;
+    left: 2%;
+  }
+  .loadanimem {
+    width: 300px;
+    height: 120px;
+    left: 35%;
+  }
+  .loadanimer {
+    width: 220px;
+    height: 300px;
+    right: 5%;
+  }
+  .loadanimerb {
+    width: 220px;
+    height: 300px;
+    right: 2%;
   }
   .card {
     width: 80%;
@@ -972,6 +1102,27 @@ nav > .table > .contents > .content > .link:hover {
     display: none;
   }
   .blackbgcop {
+    display: none;
+  }
+
+  .loadpage > .loadimg {
+    margin-left: -75px;
+  }
+  .loadanimel {
+    display: none;
+  }
+  .loadanimelb {
+    display: none;
+  }
+  .loadanimem {
+    width: 300px;
+    height: 150px;
+    left: 14%;
+  }
+  .loadanimer {
+    display: none;
+  }
+  .loadanimerb {
     display: none;
   }
   .card {
