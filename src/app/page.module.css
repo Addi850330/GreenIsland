@@ -304,9 +304,9 @@ nav > .table > .contents > .content > .link:hover {
   width: 100%;
   height: 100vh;
   background-color: rgba(215, 29, 29, 0);
-  z-index: 0;
+  z-index: -1;
 }
-.hideside >.numberbgclose{
+.hideside > .numberbgclose {
   background-color: rgba(0, 0, 0, 0);
   pointer-events: none;
 }
@@ -603,7 +603,7 @@ nav > .table > .contents > .content > .link:hover {
   overflow: hidden;
 }
 .card > .cardset {
-  margin: 45px 45px 20px 45px;
+  margin: 35px 45px 20px 45px;
   position: relative;
   width: 160px;
   height: 225px;
@@ -618,14 +618,17 @@ nav > .table > .contents > .content > .link:hover {
   border-radius: 10px;
 }
 .card > .cardset > .cardtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   position: absolute;
-  bottom: 0;
+  overflow: hidden;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 110%;
+  width: 100%;
   transition: 0.2s;
-  opacity: 0;
+  opacity: 1;
 }
 .card > .cardset:hover .cardinfo {
   transition: 0.3s;
@@ -634,10 +637,7 @@ nav > .table > .contents > .content > .link:hover {
     rgba(8, 177, 243, 0.2) -9px 6px, rgba(8, 177, 243, 0.1) -12px 8px,
     rgba(8, 176, 243, 0.05) -15px 10px;
 }
-.card > .cardset:hover .cardtitle {
-  bottom: -60px;
-  opacity: 1;
-}
+
 .card > .cardset > .cardinfo > button {
   width: 100%;
   height: 100%;
@@ -949,16 +949,30 @@ nav > .table > .contents > .content > .link:hover {
 }
 
 /* RWD */
+@media (max-width: 1434px) {
+  .nav > .title {
+    font-size: 2.1rem;
+  }
+  .nav > .table {
+    margin-right: 70px;
+  }
 
+  .nav > .table > .contents > .content {
+    padding: 0 18px;
+  }
+  .nav > .table > .contents > .content > .contentarrow::before {
+    left: 0px;
+  }
+  .card > .cardset {
+    margin: 25px 30px 30px 30px;
+  }
+}
 @media (max-width: 1280px) {
   .nav > .title {
     font-size: 2rem;
     transform: translateX(30%);
   }
-  .nav > .table > .contents > .content {
-    padding: 0 15px;
-    position: relative;
-  }
+
   .nav > .table > .contents > .content > .contentarrow::before {
     left: 0px;
   }
@@ -981,8 +995,32 @@ nav > .table > .contents > .content > .link:hover {
   .card {
     padding-left: 250px;
   }
+}
+@media (max-width: 1268px) {
   .card > .cardset {
-    margin: 25px 30px 20px 30px;
+    margin: 25px 25px 30px 25px;
+  }
+}
+@media (max-width: 1202px) {
+  .card > .cardset {
+    margin: 25px 20px 30px 20px;
+  }
+}
+@media (max-width: 1140px) {
+  .nav > .title {
+    transform: translateX(20%);
+  }
+  .nav > .table > .contents > .content {
+    padding: 0 12px;
+  }
+  .nav > .table > .contents > .content > .contentarrow::before {
+    left: -5px;
+  }
+  .card {
+    width: 60%;
+  }
+  .card > .cardset {
+    margin: 25px 20px 30px 20px;
   }
 }
 @media (max-width: 1024px) {
@@ -1029,7 +1067,7 @@ nav > .table > .contents > .content > .link:hover {
     padding-left: 200px;
   }
   .card > .cardset {
-    margin: 25px 20px 20px 20px;
+    margin: 25px 0px 30px 20px;
   }
 }
 @media (max-width: 926px) {
@@ -1061,6 +1099,12 @@ nav > .table > .contents > .content > .link:hover {
   }
   .card > .cardset:hover .cardtitle {
     bottom: -50px;
+  }
+}
+@media (max-width: 822px) {
+  .card {
+    width: 80%;
+    padding-left: 8%;
   }
 }
 @media (max-width: 744px) {
@@ -1112,23 +1156,91 @@ nav > .table > .contents > .content > .link:hover {
     bottom: -50px;
   }
 }
-
-@media (max-width: 375px) {
+@media (max-width: 706px) {
+  .card > .cardset {
+    width: 134px;
+    height: 190px;
+  }
+  .cardboard {
+    display: none;
+  }
+}
+@media (max-width: 588px) {
   .nav > .icon {
-    margin-left: 5%;
+    margin-left: 45px;
   }
   .nav > .icon > .text {
     display: none;
   }
   .nav > .title {
+    font-size: 2rem;
     transform: translateX(0%);
   }
   .nav > .contentclose {
-    margin-right: -5%;
+    margin-right: -3%;
   }
-  .cardboard {
-    display: none;
+  .hideside {
+    right: 18%;
   }
+  .card {
+    width: 75%;
+  }
+  .card > .cardset {
+    width: 160px;
+    height: 225px;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 534px) {
+  .card > .cardset {
+    width: 134px;
+    height: 190px;
+  }
+}
+@media (max-width: 474px) {
+  .nav > .title {
+    font-size: 1.5rem;
+  }
+  .nav > .contentclose {
+    margin-right: -4%;
+  }
+  .hideside {
+    right: 20%;
+  }
+  .card {
+    padding-left: 4%;
+  }
+  .card > .cardset {
+    margin-right: 6%;
+  }
+  .card > .cardset > .cardtitle {
+    width: 110%;
+  }
+}
+@media (max-width: 410px) {
+  .nav > .icon {
+    margin-left: 6%;
+  }
+
+  .nav > .contentclose {
+    margin-right: -9%;
+  }
+  .card {
+    width: 80%;
+  }
+  .card > .cardset {
+    margin-right: 5%;
+  }
+}
+@media (max-width: 375px) {
+  .nav > .icon {
+    margin-left: 5%;
+  }
+
+  .nav > .contentclose {
+    margin-right: -11%;
+  }
+
   .blackbgccl {
     display: none;
   }
@@ -1156,16 +1268,14 @@ nav > .table > .contents > .content > .link:hover {
   .loadanimerb {
     display: none;
   }
-  .card {
-    padding-left: 5%;
-  }
+
   .card > .cardset {
     width: 134px;
     height: 190px;
   }
   .card > .cardset > .cardtitle {
     opacity: 1;
-    height: 37px;
+    height: 30px;
   }
   .card > .cardset:hover .cardinfo {
     transform: translate(0, 0);
@@ -1182,7 +1292,7 @@ nav > .table > .contents > .content > .link:hover {
   }
 }
 
-/* mobile cardinfo */
+/* mobile cardinfo--------------------------------- */
 
 .mcard {
   background-color: rgba(244, 243, 237, 1);
