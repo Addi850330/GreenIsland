@@ -948,6 +948,79 @@ nav > .table > .contents > .content > .link:hover {
   display: block;
 }
 
+/*Topbutton--------------------- */
+
+.topButton {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 160px;
+  right: 11%;
+  background-color: rgb(48, 23, 22);
+  border: 5px solid rgb(69, 38, 37);
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.topButtonnone {
+  right: -11%;
+}
+.topButton:hover {
+  background-color: rgb(69, 38, 37);
+  border: 5px solid rgb(48, 23, 22);
+}
+
+.topButton:hover .topTitle {
+  color: rgb(69, 38, 37);
+}
+.topButton:hover .topAnime {
+  opacity: 1;
+}
+.topButton > .topTitle {
+  width: 100%;
+  height: 100%;
+  color: azure;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+.topButton > .topAnime {
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: rotate(-90deg);
+  opacity: 0;
+  transition: 0.2s;
+}
+.topButton > .topAnime > .topimg {
+  width: 100%;
+  height: 100%;
+  animation-name: arrowUp;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes arrowUp {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 /* RWD */
 @media (max-width: 1434px) {
   .nav > .title {
@@ -1100,6 +1173,9 @@ nav > .table > .contents > .content > .link:hover {
   .card > .cardset:hover .cardtitle {
     bottom: -50px;
   }
+  .topButton {
+    bottom: 225px;
+  }
 }
 @media (max-width: 822px) {
   .card {
@@ -1155,6 +1231,9 @@ nav > .table > .contents > .content > .link:hover {
   .card > .cardset:hover .cardtitle {
     bottom: -50px;
   }
+  .topButton {
+    right: 10%;
+  }
 }
 @media (max-width: 706px) {
   .card > .cardset {
@@ -1189,6 +1268,9 @@ nav > .table > .contents > .content > .link:hover {
     width: 160px;
     height: 225px;
     margin-right: 40px;
+  }
+  .topButton {
+    right: 12%;
   }
 }
 @media (max-width: 534px) {
@@ -1437,7 +1519,6 @@ nav > .table > .contents > .content > .link:hover {
     width: 100px;
     height: 100px;
     position: absolute;
-
     bottom: 25vh;
   }
 }

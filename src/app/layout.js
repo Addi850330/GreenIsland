@@ -2,6 +2,7 @@
 import { React, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Nav from "../components/Nav";
+import TopButton from "@/components/TopButton";
 import Footer from "../components/Footer";
 import "./globals.css";
 import AOS from "aos";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
           freeslot={freeslotpage}
         />
         {children}
+        <TopButton page={page} />
         <Footer />
       </body>
     </html>
