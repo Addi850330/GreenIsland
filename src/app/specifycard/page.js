@@ -142,13 +142,14 @@ const page = () => {
   };
 
   // pop-up window-------------------------------------
-  const [cardId, setCardId] = useState("");
+
   const [cardname, setCardname] = useState("");
   const [cardrank, setCardrank] = useState("");
   const [cardnumber, setCardnumber] = useState("");
   const [carddescription, setCarddescription] = useState("");
   const [cardimg, setCardimg] = useState("");
   const [cardimgorigin, setCardimgorigin] = useState("");
+
   const [windowSwitch, setWindowSwitch] = useState("close");
   const [cardIndex, setCardindex] = useState("");
 
@@ -157,7 +158,7 @@ const page = () => {
 
   const cardInfo = function (e) {
     const cardid = e.target.name;
-    // console.log(cardid);
+
     datas.forEach((obj, index) => {
       if (obj.id == cardid) {
         setCardname(obj.name);
@@ -166,7 +167,7 @@ const page = () => {
         setCarddescription(obj.description);
         setCardimg(obj.img);
         setCardimgorigin(obj.imgorigin);
-        setCardId(obj.id);
+
         setCardindex(index);
       }
     });
@@ -186,7 +187,7 @@ const page = () => {
     setCarddescription(obj.description);
     setCardimg(obj.img);
     setCardimgorigin(obj.imgorigin);
-    setCardId(obj.id);
+
     setCardindex(nextobj);
   };
 
@@ -199,7 +200,7 @@ const page = () => {
     setCarddescription(obj.description);
     setCardimg(obj.img);
     setCardimgorigin(obj.imgorigin);
-    setCardId(obj.id);
+
     setCardindex(previousobj);
   };
 
@@ -214,7 +215,6 @@ const page = () => {
     } else {
       setPreviousArrow("show");
     }
-    console.log(cardIndex);
   }, [cardIndex]);
   return (
     <>

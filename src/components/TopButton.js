@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 import style from "../app/page.module.css";
 const TopButton = (props) => {
   const [scroll, setScroll] = useState("none");
-  //
+
   const [myScrollTop, setMyScrollTop] = useState(0);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,7 +17,6 @@ const TopButton = (props) => {
     // console.log(scroll);
   }, [myScrollTop]);
 
-  //
   const toTop = function () {
     window.scrollTo({
       top: 0,
@@ -36,7 +35,7 @@ const TopButton = (props) => {
     >
       <div className={style.topTitle}>TOP</div>
       <div className={style.topAnime}>
-        <img className={style.topimg} src="./icon/arrow.png" alt="" />
+        <img className={style.topimg} src="../icon/arrow.png" alt="" />
       </div>
     </div>
   );

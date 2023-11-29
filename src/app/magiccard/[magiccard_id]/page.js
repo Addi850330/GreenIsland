@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 
 const Post = ({ params }) => {
   const magiccard_id = params.magiccard_id;
+  const [nextbtn, setNextbtn] = useState("show");
+  const [previousbtn, setPreviosbtn] = useState("show");
 
   const [cardname, setCardname] = useState("");
   const [cardrank, setCardrank] = useState("");
@@ -14,6 +16,7 @@ const Post = ({ params }) => {
   const [carddescription, setCarddescription] = useState("");
   const [cardimg, setCardimg] = useState("");
   const [cardimgorigin, setCardimgorigin] = useState("");
+  const [cardIndex, setCardIndex] = useState("");
 
   const cardid = magiccard_id;
   const datas = data[1].magiccard;
@@ -28,7 +31,7 @@ const Post = ({ params }) => {
       top: 0,
       behavior: "smooth",
     });
-    datas.forEach((obj) => {
+    datas.forEach((obj, index) => {
       if (obj.id == cardid) {
         setCardname(obj.name);
         setCardrank(obj.rank);
@@ -36,9 +39,31 @@ const Post = ({ params }) => {
         setCarddescription(obj.description);
         setCardimg(obj.img);
         setCardimgorigin(obj.imgorigin);
+        setCardIndex(index);
+        if (index == datas.length - 1) {
+          setNextbtn("close");
+        } else if (index == 0) {
+          setPreviosbtn("close");
+        } else {
+          setNextbtn("show");
+          setPreviosbtn("show");
+        }
       }
     });
   }, []);
+
+  const nextpage = function () {
+    const newcardindex = cardIndex + 1;
+    const newcardset = datas[newcardindex].id;
+    console.log(newcardindex, newcardset);
+    window.location.href = `/magiccard/${newcardset}`;
+  };
+  const previouspage = function () {
+    const newcardindex = cardIndex - 1;
+    const newcardset = datas[newcardindex].id;
+    console.log(newcardindex, newcardset);
+    window.location.href = `/magiccard/${newcardset}`;
+  };
 
   return (
     <>
@@ -66,6 +91,28 @@ const Post = ({ params }) => {
               Dowload
             </Link>
           </div>
+        </div>
+        <div className={style.mobileBtn}>
+          <button
+            className={
+              previousbtn === "show"
+                ? `${style.mobilePreviousBtn}`
+                : `${style.mobilePreviousBtn} ${style.mobilePreviousBtnHide}`
+            }
+            onClick={previouspage}
+          >
+            Prev
+          </button>
+          <button
+            className={
+              nextbtn === "show"
+                ? `${style.mobileNextBtn}`
+                : `${style.mobileNextBtn} ${style.mobileNextBtnHide}`
+            }
+            onClick={nextpage}
+          >
+            Next
+          </button>
         </div>
       </div>
     </>

@@ -38,10 +38,15 @@ const page = () => {
 
   const [windowSwitch, setWindowSwitch] = useState("close");
 
+  const [cardIndex, setCardindex] = useState("");
+
+  const [nextArrow, setNextArrow] = useState("show");
+  const [previousArrow, setPreviousArrow] = useState("show");
+
   const cardInfo = function (e) {
     const cardid = e.target.name;
-    // console.log(cardid);
-    datas.forEach((obj) => {
+
+    datas.forEach((obj, index) => {
       if (obj.id == cardid) {
         setCardname(obj.name);
         setCardrank(obj.rank);
@@ -49,7 +54,8 @@ const page = () => {
         setCarddescription(obj.description);
         setCardimg(obj.img);
         setCardimgorigin(obj.imgorigin);
-        // console.log(obj);
+
+        setCardindex(index);
       }
     });
     setWindowSwitch("open");
@@ -59,11 +65,51 @@ const page = () => {
     setWindowSwitch("close");
   };
 
+  const cardnext = function () {
+    const nextobj = cardIndex + 1;
+    let obj = datas[nextobj];
+    setCardname(obj.name);
+    setCardrank(obj.rank);
+    setCardnumber(obj.number);
+    setCarddescription(obj.description);
+    setCardimg(obj.img);
+    setCardimgorigin(obj.imgorigin);
+
+    setCardindex(nextobj);
+  };
+
+  const cardprevious = function () {
+    const previousobj = cardIndex - 1;
+    let obj = datas[previousobj];
+    setCardname(obj.name);
+    setCardrank(obj.rank);
+    setCardnumber(obj.number);
+    setCarddescription(obj.description);
+    setCardimg(obj.img);
+    setCardimgorigin(obj.imgorigin);
+
+    setCardindex(previousobj);
+  };
+
+  useEffect(() => {
+    if (cardIndex == datas.length - 1) {
+      setNextArrow("hide");
+    } else {
+      setNextArrow("show");
+    }
+    if (cardIndex == 0) {
+      setPreviousArrow("hide");
+    } else {
+      setPreviousArrow("show");
+    }
+  }, [cardIndex]);
   return (
     <>
       <Sidebar rankAll={rankAll} test={ranktest} rank={rank}></Sidebar>
       <CardInfo
         close={close}
+        cardnext={cardnext}
+        cardprevious={cardprevious}
         windowSwitch={windowSwitch}
         name={cardname}
         rank={cardrank}
@@ -71,6 +117,8 @@ const page = () => {
         description={carddescription}
         img={cardimg}
         imgorigin={cardimgorigin}
+        nextArrow={nextArrow}
+        previousArrow={previousArrow}
       />
       <div className={style.card}>
         {cards.map((card, index) => (

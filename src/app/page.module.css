@@ -1273,6 +1273,9 @@ nav > .table > .contents > .content > .link:hover {
   .topButton {
     right: 10%;
   }
+  .topButtonnone {
+    right: -11%;
+  }
 }
 @media (max-width: 706px) {
   .card > .cardset {
@@ -1281,6 +1284,12 @@ nav > .table > .contents > .content > .link:hover {
   }
   .cardboard {
     display: none;
+  }
+  .topButton {
+    right: 10%;
+  }
+  .topButtonnone {
+    right: -11%;
   }
 }
 @media (max-width: 588px) {
@@ -1311,11 +1320,20 @@ nav > .table > .contents > .content > .link:hover {
   .topButton {
     right: 12%;
   }
+  .topButtonnone {
+    right: -11%;
+  }
 }
 @media (max-width: 534px) {
   .card > .cardset {
     width: 134px;
     height: 190px;
+  }
+  .topButton {
+    right: 11%;
+  }
+  .topButtonnone {
+    right: -11%;
   }
 }
 @media (max-width: 474px) {
@@ -1337,6 +1355,12 @@ nav > .table > .contents > .content > .link:hover {
   .card > .cardset > .cardtitle {
     width: 110%;
   }
+  .topButton {
+    right: 12%;
+  }
+  .topButtonnone {
+    right: -11%;
+  }
 }
 @media (max-width: 410px) {
   .nav > .icon {
@@ -1351,6 +1375,12 @@ nav > .table > .contents > .content > .link:hover {
   }
   .card > .cardset {
     margin-right: 5%;
+  }
+  .topButton {
+    right: 11%;
+  }
+  .topButtonnone {
+    right: -20%;
   }
 }
 @media (max-width: 375px) {
@@ -1457,6 +1487,69 @@ nav > .table > .contents > .content > .link:hover {
   padding: 8px 24px;
   border-radius: 8px;
   margin-top: 20px;
+}
+.mcard > .mobileBtn {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mcard > .mobileBtn > .mobileNextBtn {
+  border-radius: 8px;
+  width: 150px;
+  height: 56px;
+  padding-right: 40px;
+  font-size: 1.5rem;
+  background-color: rgba(48, 30, 68, 1);
+  border: solid 2px rgba(48, 30, 68, 1);
+  color: rgba(244, 243, 237, 1);
+  font-family: "Joti One", serif;
+  position: relative;
+}
+.mcard > .mobileBtn > .mobileNextBtnHide {
+  display: none;
+}
+.mcard > .mobileBtn > .mobileNextBtn::before {
+  content: "";
+  background-image: url("../../public/icon/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.mcard > .mobileBtn > .mobilePreviousBtn {
+  border-radius: 8px;
+  width: 150px;
+  height: 56px;
+  padding-left: 40px;
+  font-size: 1.5rem;
+  background-color: rgba(48, 30, 68, 1);
+  border: solid 2px rgba(48, 30, 68, 1);
+  color: rgba(244, 243, 237, 1);
+  font-family: "Joti One", serif;
+  position: relative;
+}
+.mcard > .mobileBtn > .mobilePreviousBtnHide {
+  display: none;
+}
+.mcard > .mobileBtn > .mobilePreviousBtn::before {
+  content: "";
+  background-image: url("../../public/icon/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  left: 20px;
 }
 @media (max-width: 744px) {
   .mcard > .mcardimg {
