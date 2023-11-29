@@ -20,6 +20,16 @@ const CardInfo = (props) => {
             : `${style.cardboard}`
         }
       >
+        <div
+          onClick={props.cardprevious}
+          className={
+            props.previousArrow === "show"
+              ? `${style.previous}`
+              : `${style.previous} ${style.previousArrow}`
+          }
+        >
+          <img src="./icon/arrow.png" alt="" />
+        </div>
         <div className={style.close}>
           <button onClick={props.close}>X</button>
         </div>
@@ -54,6 +64,16 @@ const CardInfo = (props) => {
               <p>{props.description}</p>
             </div>
           </div>
+        </div>
+        <div
+          onClick={props.cardnext}
+          className={
+            props.nextArrow === "show"
+              ? `${style.next}`
+              : `${style.next} ${style.nextArrowHide}`
+          }
+        >
+          <img src="./icon/arrow.png" alt="" />
         </div>
       </div>
     </>
