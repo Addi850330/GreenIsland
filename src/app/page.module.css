@@ -1282,6 +1282,19 @@ nav > .table > .contents > .content > .link:hover {
     width: 134px;
     height: 190px;
   }
+  .card > .cardset:hover .cardinfo {
+    transform: translate(0, 0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .card > .cardset > .cardinfo > .mobilepage {
+    display: block;
+  }
+  .blackbgccl {
+    display: none;
+  }
+  .blackbgcop {
+    display: none;
+  }
   .cardboard {
     display: none;
   }
@@ -1428,13 +1441,7 @@ nav > .table > .contents > .content > .link:hover {
     opacity: 1;
     height: 30px;
   }
-  .card > .cardset:hover .cardinfo {
-    transform: translate(0, 0);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  .card > .cardset > .cardinfo > .mobilepage {
-    display: block;
-  }
+
   .hideside {
     right: 20%;
   }
@@ -1454,7 +1461,7 @@ nav > .table > .contents > .content > .link:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 25vh;
+  padding-top: 15vh;
   padding-bottom: 200px;
   overflow: hidden;
 }
@@ -1490,7 +1497,7 @@ nav > .table > .contents > .content > .link:hover {
 }
 .mcard > .mobileBtn {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1552,26 +1559,40 @@ nav > .table > .contents > .content > .link:hover {
   left: 20px;
 }
 @media (max-width: 744px) {
+  .mcard {
+    padding-bottom: 15vh;
+  }
   .mcard > .mcardimg {
     margin-right: 0%;
     margin-bottom: 20px;
   }
 }
-@media (max-width: 488px) {
+@media (max-width: 478px) {
   .mcard {
     padding-top: 15vh;
     padding-bottom: 10vh;
   }
   .mcard > .mcardimg {
-    width: 192px;
-    height: 277px;
+    width: 230px;
+    height: 332px;
   }
   .mcard > .mcardinfo {
-    width: 192px;
+    width: 230px;
     font-size: 1.2rem;
   }
   .mcard > .mcardinfo > div {
     margin-bottom: 5px;
+  }
+  .mcard > .mobileBtn {
+    margin-top: 25px;
+  }
+  .mcard > .mobileBtn > .mobileNextBtn {
+    width: 135px;
+    height: 50px;
+  }
+  .mcard > .mobileBtn > .mobilePreviousBtn {
+    width: 135px;
+    height: 50px;
   }
 }
 

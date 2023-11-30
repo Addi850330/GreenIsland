@@ -149,6 +149,7 @@ const page = () => {
   const [carddescription, setCarddescription] = useState("");
   const [cardimg, setCardimg] = useState("");
   const [cardimgorigin, setCardimgorigin] = useState("");
+  const [cardId, setCardId] = useState("");
 
   const [windowSwitch, setWindowSwitch] = useState("close");
   const [cardIndex, setCardindex] = useState("");
@@ -167,7 +168,7 @@ const page = () => {
         setCarddescription(obj.description);
         setCardimg(obj.img);
         setCardimgorigin(obj.imgorigin);
-
+        setCardId(obj.id);
         setCardindex(index);
       }
     });
@@ -187,7 +188,7 @@ const page = () => {
     setCarddescription(obj.description);
     setCardimg(obj.img);
     setCardimgorigin(obj.imgorigin);
-
+    setCardId(obj.id);
     setCardindex(nextobj);
   };
 
@@ -200,7 +201,7 @@ const page = () => {
     setCarddescription(obj.description);
     setCardimg(obj.img);
     setCardimgorigin(obj.imgorigin);
-
+    setCardId(obj.id);
     setCardindex(previousobj);
   };
 
@@ -242,6 +243,7 @@ const page = () => {
         description={carddescription}
         img={cardimg}
         imgorigin={cardimgorigin}
+        id={cardId}
         nextArrow={nextArrow}
         previousArrow={previousArrow}
       />

@@ -1,8 +1,27 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import style from "../app/page.module.css";
 import Link from "next/link";
 const CardInfo = (props) => {
+  const pathname = usePathname();
+  const [page, setPage] = useState("");
+
+  useEffect(() => {
+    if (pathname === "/specifycard") {
+      setPage("specifycard");
+    }
+    if (pathname === "/magiccard") {
+      setPage("magiccard");
+    }
+    if (pathname === "/managercard") {
+      setPage("managercard");
+    }
+    if (pathname === "freeslot") {
+      setPage("freeslot");
+    }
+  }, []);
+
   return (
     <>
       <div
@@ -45,11 +64,11 @@ const CardInfo = (props) => {
             </div>
             <Link
               className={style.imglink}
-              href={props.imgorigin}
+              href={`/${page}/${props.id}`}
               target="_blank"
               rel="noopener"
             >
-              Download
+              Card-Page
             </Link>
           </div>
           <div className={style.cbicon}>
