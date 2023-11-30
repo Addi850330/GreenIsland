@@ -33,11 +33,13 @@
 }
 .icon > .text {
   font-size: 1.2rem;
+  cursor: default;
 }
 .nav > .title {
   font-family: "Joti One", serif;
   font-size: 2.5rem;
   transform: translateX(50%);
+  cursor: default;
 }
 .nav > .table {
   margin-right: 50px;
@@ -223,6 +225,9 @@ nav > .table > .contents > .content > .link:hover {
   padding: 5px 10px;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  border-radius: 2px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(204, 204, 204, 0.5) -3px -3px 6px 1px inset;
 }
 .sidebarimg {
   width: 100px;
@@ -951,11 +956,13 @@ nav > .table > .contents > .content > .link:hover {
   transition: 0.2s;
   background-color: rgba(75, 162, 110, 1);
   color: rgba(244, 243, 237, 1);
-  padding: 0 10px;
+  padding: 10px;
+  font-family: "Joti One", serif;
   border-radius: 3px;
 }
 .cardboard > .cardboardInfo > .cbimg > a:hover {
   box-shadow: rgba(8, 187, 241, 0.73) 0px 22px 70px 4px;
+  color: rgb(17, 170, 217);
 }
 
 .cardboard > .cardboardInfo > .cbimg:hover > .imglink {
@@ -1494,6 +1501,12 @@ nav > .table > .contents > .content > .link:hover {
   padding: 8px 24px;
   border-radius: 8px;
   margin-top: 20px;
+  font-family: "Joti One", serif;
+  transition: 0.2s;
+}
+.mcard > .mcardinfo > .downloadcard > .mcardlink:hover {
+  box-shadow: rgba(8, 187, 241, 0.73) 0px 0px 50px 4px;
+  color: rgb(17, 170, 217);
 }
 .mcard > .mobileBtn {
   width: 100%;
@@ -1513,6 +1526,12 @@ nav > .table > .contents > .content > .link:hover {
   color: rgba(244, 243, 237, 1);
   font-family: "Joti One", serif;
   position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mcard > .mobileBtn > .mobileNextBtn:hover {
+  box-shadow: rgba(8, 187, 241, 0.73) 0px 0px 50px 4px;
+  color: rgb(17, 170, 217);
 }
 .mcard > .mobileBtn > .mobileNextBtnHide {
   display: none;
@@ -1541,6 +1560,12 @@ nav > .table > .contents > .content > .link:hover {
   color: rgba(244, 243, 237, 1);
   font-family: "Joti One", serif;
   position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mcard > .mobileBtn > .mobilePreviousBtn:hover {
+  box-shadow: rgba(8, 187, 241, 0.73) 0px 0px 50px 4px;
+  color: rgb(17, 170, 217);
 }
 .mcard > .mobileBtn > .mobilePreviousBtnHide {
   display: none;

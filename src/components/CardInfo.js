@@ -68,7 +68,7 @@ const CardInfo = (props) => {
               target="_blank"
               rel="noopener"
             >
-              Card-Page
+              CARD-IMG
             </Link>
           </div>
           <div className={style.cbicon}>
