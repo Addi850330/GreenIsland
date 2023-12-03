@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebarluler";
 import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
 import style from "../page.module.css";
-const page = () => {
+const Page = () => {
   const datas = data[2].managercard;
   const [cards, setCards] = useState(datas);
   const [rank, setRank] = useState("all");
@@ -154,4 +154,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -9,7 +9,6 @@ const Post = ({ params }) => {
   const freeslot_id = params.freeslot_id;
   const [nextbtn, setNextbtn] = useState("show");
   const [previousbtn, setPreviosbtn] = useState("show");
-
   const [cardname, setCardname] = useState("");
   const [cardrank, setCardrank] = useState("");
   const [cardnumber, setCardnumber] = useState("");

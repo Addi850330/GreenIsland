@@ -6,7 +6,7 @@ import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
 import style from "../page.module.css";
 
-const page = () => {
+const Page = () => {
   const datas = data[1].magiccard;
   const [cards, setCards] = useState(datas);
 
@@ -301,4 +301,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
