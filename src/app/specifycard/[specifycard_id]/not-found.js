@@ -17,7 +17,7 @@ const NotFound = () => {
           height={200}
           className={style.rightimg}
           src="/img/errorpage/gon.png"
-          alt="gon"
+          alt="spe"
         />
         <div className={style.nfinfo}>
           <Image
