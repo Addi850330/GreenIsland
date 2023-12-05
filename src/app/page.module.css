@@ -561,7 +561,7 @@ nav > .table > .contents > .content > .link:hover {
   height: 200px;
   position: absolute;
   z-index: -1;
-  left: 35%;
+  left: 39%;
 }
 .loadanimem > img {
   width: 100%;
@@ -1084,6 +1084,9 @@ nav > .table > .contents > .content > .link:hover {
   .nav > .table > .contents > .content > .contentarrow::before {
     left: 0px;
   }
+  .loadanimem {
+    left: 35%;
+  }
   .card > .cardset {
     margin: 25px 30px 30px 30px;
   }
@@ -1136,6 +1139,9 @@ nav > .table > .contents > .content > .link:hover {
   }
   .nav > .table > .contents > .content > .contentarrow::before {
     left: -5px;
+  }
+  .loadanimem {
+    left: 31%;
   }
   .card {
     width: 60%;
@@ -1287,6 +1293,24 @@ nav > .table > .contents > .content > .link:hover {
   }
 }
 @media (max-width: 706px) {
+  .loadimg {
+    margin-left: -50px;
+  }
+  .loadanimel {
+    display: none;
+  }
+  .loadanimelb {
+    display: none;
+  }
+  .loadanimem {
+    left: 30%;
+  }
+  .loadanimer {
+    display: none;
+  }
+  .loadanimerb {
+    display: none;
+  }
   .card > .cardset {
     width: 134px;
     height: 190px;
@@ -1331,6 +1355,9 @@ nav > .table > .contents > .content > .link:hover {
   .hideside {
     right: 18%;
   }
+  .loadanimem {
+    left: 28%;
+  }
   .card {
     width: 75%;
   }
@@ -1347,6 +1374,12 @@ nav > .table > .contents > .content > .link:hover {
   }
 }
 @media (max-width: 534px) {
+  .loadpage > .loadimg {
+    margin-left: -60px;
+  }
+  .loadanimem {
+    left: 23%;
+  }
   .card > .cardset {
     width: 134px;
     height: 190px;
@@ -1367,6 +1400,12 @@ nav > .table > .contents > .content > .link:hover {
   }
   .hideside {
     right: 20%;
+  }
+  .loadpage > .loadimg {
+    margin-left: -70px;
+  }
+  .loadanimem {
+    left: 19%;
   }
   .card {
     padding-left: 4%;
@@ -1391,6 +1430,10 @@ nav > .table > .contents > .content > .link:hover {
 
   .nav > .contentclose {
     margin-right: -9%;
+  }
+
+  .loadanimem {
+    left: 15%;
   }
   .card {
     width: 80%;
