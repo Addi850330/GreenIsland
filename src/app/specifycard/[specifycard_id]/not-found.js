@@ -10,14 +10,14 @@ const NotFound = () => {
           height={200}
           className={style.leftimg}
           src="/img/errorpage/Killua.png"
-          alt=""
+          alt="Killua"
         />
         <Image
           width={190}
           height={200}
           className={style.rightimg}
           src="/img/errorpage/gon.png"
-          alt=""
+          alt="gon"
         />
         <div className={style.nfinfo}>
           <Image
@@ -25,7 +25,7 @@ const NotFound = () => {
             height={200}
             className={style.nfimg}
             src="/img/errorpage/404.png"
-            alt=""
+            alt="errorpage"
           />
           <div className={style.nftext}>
             <div className={style.nftile}>404 Not Found</div>
