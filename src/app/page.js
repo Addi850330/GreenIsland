@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import style from "./page.module.css";
 
 export default function Home() {
@@ -29,8 +30,20 @@ export default function Home() {
       <div className={style.pageout}>
         <div className={style.loadpage}>
           <div className={style.loadimg}>
-            <img className={style.imgfront} src="./img/cardback.png" alt="" />
-            <img className={style.imgback} src="./img/cardback.png" alt="" />
+            <Image
+              width={550}
+              height={605}
+              className={style.imgfront}
+              src="/img/cardback.png"
+              alt=""
+            />
+            <Image
+              width={550}
+              height={605}
+              className={style.imgback}
+              src="/img/cardback.png"
+              alt=""
+            />
           </div>
           <div className={style.loadtext}>
             <p>L</p>
@@ -45,19 +58,44 @@ export default function Home() {
             <p>.</p>
           </div>
           <div data-aos="fade-left" className={style.loadanimel}>
-            <img src="./img/homepage/killa.png" alt="" />
+            <Image
+              width={550}
+              height={605}
+              src="/img/homepage/killa.png"
+              alt="killa"
+            />
           </div>
           <div data-aos="fade-down-right" className={style.loadanimelb}>
-            <img src="./img/homepage/killab.png" alt="" />
+            <Image
+              width={550}
+              height={605}
+              src="/img/homepage/killab.png"
+              alt=""
+            />
           </div>
           <div data-aos="flip-up" className={style.loadanimem}>
-            <img src="./img/homepage/hero.png" alt="" />
+            <Image
+              width={550}
+              height={605}
+              src="/img/homepage/hero.png"
+              alt=""
+            />
           </div>
           <div data-aos="fade-right" className={style.loadanimer}>
-            <img src="./img/homepage/gon.png" alt="" />
+            <Image
+              width={550}
+              height={605}
+              src="/img/homepage/gon.png"
+              alt=""
+            />
           </div>
           <div data-aos="fade-up-left" className={style.loadanimerb}>
-            <img src="./img/homepage/gonb.png" alt="" />
+            <Image
+              width={550}
+              height={605}
+              src="/img/homepage/gonb.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

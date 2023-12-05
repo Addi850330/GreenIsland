@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Sidebar from "../../components/Sidebar";
 import CardInfo from "../../components/CardInfo";
 import { data } from "../data";
@@ -257,21 +258,38 @@ const Page = () => {
           >
             <div id={card.number} className={style.cardinfo}>
               <button>
-                <img name={card.id} src={card.img} alt={card.name} />
+                <Image
+                  width={160}
+                  height={225}
+                  name={card.id}
+                  src={card.img}
+                  alt={card.name}
+                />
               </button>
               <Link
                 href={`/specifycard/${card.id}`}
                 className={style.mobilepage}
                 target="_blank"
               >
-                <img name={card.id} src={card.img} alt={card.name} />
+                <Image
+                  width={160}
+                  height={225}
+                  name={card.id}
+                  src={card.img}
+                  alt={card.name}
+                />
               </Link>
             </div>
             <p className={style.cardtitle}>
               {card.number} {card.name}
             </p>
             <div className={style.cardbgc}>
-              <img src="./img/cardset.png" alt="bgc" />
+              <Image
+                width={160}
+                height={225}
+                src="/img/cardset.png"
+                alt="bgc"
+              />
             </div>
           </div>
         ))}

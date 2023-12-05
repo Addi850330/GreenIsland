@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import style from "../app/page.module.css";
 
 const Sidebar = (props) => {
@@ -40,7 +41,13 @@ const Sidebar = (props) => {
           </ul>
         </div>
         <div className={style.sidebarimg}>
-          <img onClick={props.test} src="/icon/iconLight.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            onClick={props.test}
+            src="/icon/iconLight.png"
+            alt="icon"
+          />
         </div>
         <div className={style.rankmenu}>
           <ul>
@@ -96,13 +103,15 @@ const Sidebar = (props) => {
           >
             Num
           </div>
-          <img
+          <Image
+            width={100}
+            height={100}
             className={
               hideNumber === "open"
                 ? `${style.img} ${style.opacity}`
                 : `${style.img}`
             }
-            src="./icon/iconLight.png"
+            src="/icon/iconLight.png"
             alt=""
           />
           <li
@@ -156,13 +165,15 @@ const Sidebar = (props) => {
           >
             Rank
           </div>
-          <img
+          <Image
+            width={100}
+            height={100}
             className={
               hideRank === "close"
                 ? `${style.img}`
                 : `${style.img} ${style.opacity}`
             }
-            src="./icon/iconLight.png"
+            src="/icon/iconLight.png"
             alt=""
           />
           <li

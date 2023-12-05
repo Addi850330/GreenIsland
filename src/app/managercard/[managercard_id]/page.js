@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { data } from "../../data";
 import style from "../../page.module.css";
 import { notFound } from "next/navigation";
@@ -68,7 +69,16 @@ const Post = ({ params }) => {
     <>
       <div className={style.mcard}>
         <div className={style.mcardimg}>
-          <img src={`.${cardimg}`} alt={cardname} />
+          {cardimg && (
+            <Image
+              width={300}
+              height={450}
+              priority
+              src={`${cardimg}`}
+              alt={cardname}
+              style={{ width: "100", height: "100" }}
+            />
+          )}
         </div>
         <div className={style.mcardinfo}>
           <div className={style.mcardnum}>Number : {cardnumber}</div>

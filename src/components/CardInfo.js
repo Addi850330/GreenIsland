@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import style from "../app/page.module.css";
 import Link from "next/link";
 const CardInfo = (props) => {
@@ -21,6 +22,9 @@ const CardInfo = (props) => {
       setPage("freeslot");
     }
   }, []);
+  const test = function () {
+    console.log(typeof props.img);
+  };
 
   return (
     <>
@@ -47,7 +51,13 @@ const CardInfo = (props) => {
               : `${style.previous} ${style.previousArrow}`
           }
         >
-          <img src="./icon/arrow.png" alt="" />
+          <Image
+            width={200}
+            height={200}
+            quality={100}
+            src="/icon/arrow.png"
+            alt=""
+          />
         </div>
         <div className={style.close}>
           <button onClick={props.close}>X</button>
@@ -55,12 +65,24 @@ const CardInfo = (props) => {
         <div className={style.cardboardInfo}>
           <div className={style.cbimg}>
             <div className={style.cbimgset}>
-              <img
+              <Image
+                width={200}
+                height={200}
+                quality={100}
                 className={style.backimg}
-                src="./img/cardbackold.png"
+                src="/img/cardbackold.png"
                 alt=""
               />
-              <img className={style.frontimg} src={props.img} alt="" />
+              {props.img && (
+                <Image
+                  width={200}
+                  height={200}
+                  quality={100}
+                  src={props.img}
+                  className={style.frontimg}
+                  alt=""
+                />
+              )}
             </div>
             <Link
               className={style.imglink}
@@ -72,7 +94,15 @@ const CardInfo = (props) => {
             </Link>
           </div>
           <div className={style.cbicon}>
-            <img className={style.img} src="./icon/iconLight.png" alt="" />
+            <Image
+              onClick={test}
+              width={200}
+              height={200}
+              quality={100}
+              className={style.img}
+              src="/icon/iconLight.png"
+              alt=""
+            />
           </div>
           <div className={style.cbtext}>
             <div>{props.name}</div>
@@ -92,7 +122,13 @@ const CardInfo = (props) => {
               : `${style.next} ${style.nextArrowHide}`
           }
         >
-          <img src="./icon/arrow.png" alt="" />
+          <Image
+            width={200}
+            height={200}
+            quality={100}
+            src="/icon/arrow.png"
+            alt=""
+          />
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import style from "../app/page.module.css";
 const Nav = (props) => {
   const [navhide, setNavhide] = useState("close");
@@ -18,7 +19,13 @@ const Nav = (props) => {
       <nav className={style.nav}>
         <div className={style.icon}>
           <div className={style.iconimg}>
-            <img onClick={props.testpage} src="/icon/iconLight.png" alt="" />
+            <Image
+              width={60}
+              height={60}
+              onClick={props.testpage}
+              src="/icon/iconLight.png"
+              alt=""
+            />
           </div>
           <div className={style.text}>
             <div>Hunter × Hunter</div>

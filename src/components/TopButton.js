@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
+import Image from "next/image";
 import style from "../app/page.module.css";
 const TopButton = (props) => {
   const [scroll, setScroll] = useState("none");
@@ -35,7 +36,13 @@ const TopButton = (props) => {
     >
       <div className={style.topTitle}>TOP</div>
       <div className={style.topAnime}>
-        <img className={style.topimg} src="../icon/arrow.png" alt="" />
+        <Image
+          width={40}
+          height={40}
+          className={style.topimg}
+          src="/icon/arrow.png"
+          alt=""
+        />
       </div>
     </div>
   );
