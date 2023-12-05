@@ -11,19 +11,19 @@ export default function Home() {
       return preCount + 1;
     });
   };
-  // useEffect(
-  //   function () {
-  //     // console.log("update");
-  //     let secadd = window.setInterval(counter, 1000);
-  //     return function () {
-  //       window.clearInterval(secadd);
-  //     };
-  //   },
-  //   [true]
-  // );
-  // if (sec === 3) {
-  //   window.location.href = "/specifycard";
-  // }
+  useEffect(
+    function () {
+      // console.log("update");
+      let secadd = window.setInterval(counter, 1000);
+      return function () {
+        window.clearInterval(secadd);
+      };
+    },
+    [true]
+  );
+  if (sec === 3) {
+    window.location.href = "/specifycard";
+  }
 
   return (
     <>
